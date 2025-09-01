@@ -34,7 +34,7 @@ export const HeroSection = () => {
             size="lg"
             className="px-12 py-6 text-lg font-semibold"
           >
-            Записаться Сейчас - $300
+            Записаться Сейчас
           </PaymentButton>
         </div>
 
