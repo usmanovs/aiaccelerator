@@ -39,6 +39,15 @@ export const ProgramDetails = () => {
           </div>
 
           <div className="mt-12 pt-8 border-t border-border">
+            <div className="mb-8">
+              <h4 className="text-xl font-bold text-foreground mb-4">О Цели $10,000/месяц</h4>
+              <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  Наша цель — научить вас создавать приложения, которые могут генерировать $10,000 в месяц. Это реалистичная цель для SaaS-продукта с 200-300 пользователями, платящими $30-50/месяц. За 14 дней вы изучите не только создание приложения, но и стратегии монетизации, маркетинг и масштабирование бизнеса.
+                </p>
+              </div>
+            </div>
+            
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="text-xl font-bold text-foreground mb-4">Инструменты</h4>
