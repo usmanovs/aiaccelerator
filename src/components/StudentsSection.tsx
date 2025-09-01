@@ -2,7 +2,7 @@ import { Users, GraduationCap, Star } from "lucide-react";
 
 export const StudentsSection = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-r from-secondary/5 to-primary/5">
+    <section className="py-20 px-6 bg-gradient-to-r from-secondary/5 to-primary/5 border border-border rounded-2xl mx-6 shadow-card">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h3 className="text-4xl font-bold text-gradient mb-4">
