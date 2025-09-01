@@ -382,6 +382,91 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Quick Implementation Example */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+              ⚡ Пример Быстрой Реализации
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Как превратить идею в прибыльный бизнес за несколько дней
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm p-8 rounded-2xl border border-border/50">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold mb-4">💡 Идея: "CRM для частных репетиторов"</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Берём идею: "CRM для частных репетиторов"</h4>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                  <div>
+                    <h4 className="font-semibold mb-2">На Lovable описываем:</h4>
+                    <p className="text-muted-foreground italic">"Создать приложение для репетиторов с профилями, календарём занятий и оплатой через Stripe"</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Получаем прототип за несколько часов</h4>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Тестируем на 5-10 знакомых репетиторах</h4>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">5</div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Делаем сайт и продаём подписку по $15/мес</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-primary/20 rounded-xl border border-accent/30">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">💰</span>
+                <h4 className="text-xl font-bold">Результат:</h4>
+              </div>
+              <p className="text-lg font-semibold">
+                Уже при 50 клиентах — <span className="text-accent">$750/мес</span> пассивного дохода
+              </p>
+            </div>
+
+            <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
+              <h4 className="text-lg font-bold mb-4 text-center">
+                Хотите составлю для вас ТОП-10 самых простых и прибыльных идей?
+              </h4>
+              <p className="text-muted-foreground text-center mb-6">
+                Которые реально можно реализовать на Lovable за 1-2 дня с примерным уровнем дохода
+              </p>
+              <div className="text-center">
+                <PaymentButton
+                  size="lg"
+                  className="px-8 py-4 text-lg font-semibold"
+                >
+                  Записаться и Получить Идеи
+                </PaymentButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>;
 };
 export default Index;
