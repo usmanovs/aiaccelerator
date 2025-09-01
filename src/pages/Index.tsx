@@ -107,6 +107,173 @@ const Index = () => {
           </button>
         </div>
       </section>
+
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-gradient mb-6">
+              Программа Обучения
+            </h3>
+            <p className="text-xl text-muted-foreground">
+              14 дней • 28 уроков • 4 инструмента • 1 готовое приложение
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {/* Week 1 */}
+            <div className="border border-border rounded-lg p-6">
+              <h4 className="text-2xl font-bold text-gradient mb-6">Неделя 1: Основы и Создание</h4>
+              
+              <div className="grid gap-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">1</div>
+                  <div>
+                    <h5 className="font-bold text-lg mb-2">День 1-2: Знакомство и Планирование</h5>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Введение в программу и знакомство с Lovable</li>
+                      <li>• Как генерировать идеи для приложений</li>
+                      <li>• Выбор и документирование вашей идеи</li>
+                      <li>• Настройка проекта и первые шаги</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">2</div>
+                  <div>
+                    <h5 className="font-bold text-lg mb-2">День 3-4: Начало Разработки</h5>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Создание базовой структуры приложения</li>
+                      <li>• Настройка пользовательского интерфейса</li>
+                      <li>• Основы работы с компонентами</li>
+                      <li>• Первый прототип функциональности</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">3</div>
+                  <div>
+                    <h5 className="font-bold text-lg mb-2">День 5-6: Основная Функциональность</h5>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Создание ключевых функций приложения</li>
+                      <li>• Интеграция с базой данных Supabase</li>
+                      <li>• Работа с пользовательскими данными</li>
+                      <li>• Тестирование основного функционала</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">4</div>
+                  <div>
+                    <h5 className="font-bold text-lg mb-2">День 7: Отладка и Исправление Ошибок</h5>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Методы диагностики проблем</li>
+                      <li>• Фреймворк решения багов 4x4</li>
+                      <li>• Оптимизация производительности</li>
+                      <li>• Контрольная точка прогресса</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Week 2 */}
+            <div className="border border-border rounded-lg p-6">
+              <h4 className="text-2xl font-bold text-gradient mb-6">Неделя 2: Дизайн и Запуск</h4>
+              
+              <div className="grid gap-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">5</div>
+                  <div>
+                    <h5 className="font-bold text-lg mb-2">День 8-9: Дизайн и Полировка</h5>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Улучшение дизайна интерфейса</li>
+                      <li>• Работа с библиотеками компонентов</li>
+                      <li>• Адаптивная верстка</li>
+                      <li>• UX оптимизация</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">6</div>
+                  <div>
+                    <h5 className="font-bold text-lg mb-2">День 10-11: Интеграции и Платежи</h5>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Настройка системы платежей Stripe</li>
+                      <li>• Интеграция с внешними API</li>
+                      <li>• Настройка email уведомлений</li>
+                      <li>• Система аутентификации</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">7</div>
+                  <div>
+                    <h5 className="font-bold text-lg mb-2">День 12-13: Деплой и SEO</h5>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Развертывание приложения</li>
+                      <li>• Настройка SEO параметров</li>
+                      <li>• Подключение аналитики</li>
+                      <li>• Финальные настройки брендинга</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">8</div>
+                  <div>
+                    <h5 className="font-bold text-lg mb-2">День 14: Запуск и Следующие Шаги</h5>
+                    <ul className="text-muted-foreground space-y-1">
+                      <li>• Финальная подготовка к запуску</li>
+                      <li>• Стратегии продвижения продукта</li>
+                      <li>• Планы развития приложения</li>
+                      <li>• Празднование запуска! 🎉</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8 text-center">
+              <h4 className="text-2xl font-bold mb-4">Что Включено</h4>
+              <div className="grid md:grid-cols-2 gap-4 text-left">
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    14-дневный онлайн буткемп
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    Еженедельные групповые созвоны
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    Доступ к системе Deep Work OS
+                  </li>
+                </ul>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    Приватное сообщество в Telegram
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    Пожизненный доступ к материалам
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    Персональная поддержка инструктора
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>;
 };
 export default Index;
