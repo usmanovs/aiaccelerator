@@ -78,28 +78,24 @@ const Index = () => {
       </ContentSection>
 
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gradient mb-4">
-              Ваши Инструкторы
+              Ваш Инструктор
             </h3>
             <p className="text-xl text-muted-foreground">
-              Кто вас учит? Основатели, которые действительно создают продукты.
+              Кто вас учит? Основатель, который действительно создает продукты.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <InstructorCard
-              name="Лазарь Йованович"
-              bio="Лазарь создал более 30 проектов с помощью Lovable и признан одной из ведущих фигур в области разработки с ИИ."
-              avatar="ЛЙ"
-            />
-            
-            <InstructorCard
-              name="Пэт Уоллс"
-              bio="Он основатель Starter Story, создал и запустил 30+ проектов, изучил тысячи успешных приложений."
-              avatar="ПУ"
-            />
+          <div className="flex justify-center">
+            <div className="max-w-lg">
+              <InstructorCard
+                name="Сейитбек Усманов"
+                bio="Эксперт по разработке с ИИ, создатель множества успешных проектов. Специализируется на обучении предпринимателей созданию приложений без программирования с использованием современных ИИ-инструментов."
+                avatar="СУ"
+              />
+            </div>
           </div>
         </div>
       </section>
