@@ -3,7 +3,6 @@ import { SocialProof } from "@/components/SocialProof";
 import { ContentSection } from "@/components/ContentSection";
 import { InstructorCard } from "@/components/InstructorCard";
 import { FrameworkList } from "@/components/FrameworkList";
-import { ProgramDetails } from "@/components/ProgramDetails";
 const Index = () => {
   return <div className="min-h-screen">
       <HeroSection />
@@ -34,7 +33,7 @@ const Index = () => {
       </ContentSection>
 
       <ContentSection number="02" title="Действие">
-        <div className="space-y-6 text-lg leading-relaxed">
+        <div className="space-y-6 text-lg leading-relaxed text-left">
           <p className="text-xl font-bold text-center">
             Фокус, выполнение, повторение, победа.
           </p>
@@ -94,8 +93,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <ProgramDetails />
     </div>;
 };
 export default Index;
