@@ -3,11 +3,14 @@ import { SocialProof } from "@/components/SocialProof";
 import { ContentSection } from "@/components/ContentSection";
 import { InstructorCard } from "@/components/InstructorCard";
 import { FrameworkList } from "@/components/FrameworkList";
+import { ProgramDetails } from "@/components/ProgramDetails";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      
+      <ProgramDetails />
       
       <SocialProof />
 

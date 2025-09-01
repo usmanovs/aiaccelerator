@@ -15,7 +15,7 @@ export const HeroSection = () => {
             </h2>
           </div>
           <p className="text-muted-foreground text-sm mb-6">
-            30 сентября - 15 октября, 2025
+            26 сентября - 15 октября, 2025
           </p>
         </div>
 
