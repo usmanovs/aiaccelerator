@@ -1,3 +1,5 @@
+import { Youtube, Linkedin } from "lucide-react";
+
 interface InstructorCardProps {
   name: string;
   bio: string;
@@ -27,7 +29,26 @@ export const InstructorCard = ({ name, bio, avatar, photo }: InstructorCardProps
         </div>
       </div>
       
-      <p className="text-muted-foreground leading-relaxed">{bio}</p>
+      <p className="text-muted-foreground leading-relaxed mb-6">{bio}</p>
+      
+      <div className="flex gap-4">
+        <a 
+          href="https://www.youtube.com/@seyitbek" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-accent text-accent-foreground hover:shadow-glow transition-all duration-300 hover:scale-110"
+        >
+          <Youtube className="w-5 h-5" />
+        </a>
+        <a 
+          href="https://www.linkedin.com/in/seyitbek/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-accent text-accent-foreground hover:shadow-glow transition-all duration-300 hover:scale-110"
+        >
+          <Linkedin className="w-5 h-5" />
+        </a>
+      </div>
     </div>
   );
 };
