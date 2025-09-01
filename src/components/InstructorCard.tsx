@@ -1,4 +1,4 @@
-import { Youtube, Linkedin, Instagram } from "lucide-react";
+import { Youtube, Linkedin, Instagram, Music } from "lucide-react";
 
 interface InstructorCardProps {
   name: string;
@@ -55,6 +55,14 @@ export const InstructorCard = ({ name, bio, avatar, photo }: InstructorCardProps
           className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-accent text-accent-foreground hover:shadow-glow transition-all duration-300 hover:scale-110"
         >
           <Instagram className="w-5 h-5" />
+        </a>
+        <a 
+          href="https://www.tiktok.com/@seyitbbbek" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-accent text-accent-foreground hover:shadow-glow transition-all duration-300 hover:scale-110"
+        >
+          <Music className="w-5 h-5" />
         </a>
       </div>
     </div>
