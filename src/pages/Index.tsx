@@ -34,7 +34,7 @@ const Index = () => {
 
       <ContentSection number="02" title="Действие">
         <div className="space-y-6 text-lg leading-relaxed text-left">
-          <p className="text-xl font-bold text-center">
+          <p className="text-xl font-bold text-left">
             Фокус, выполнение, повторение, победа.
           </p>
           <p className="text-left">
