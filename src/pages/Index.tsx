@@ -126,7 +126,7 @@ const Index = () => {
               <h4 className="text-2xl font-bold text-gradient mb-6">Неделя 1: Основы и Создание</h4>
               
               <div className="grid gap-6">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                   <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">1</div>
                   <div>
                     <h5 className="font-bold text-lg mb-2">День 1-2: Знакомство и Планирование</h5>
