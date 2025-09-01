@@ -3,14 +3,9 @@ import { SocialProof } from "@/components/SocialProof";
 import { ContentSection } from "@/components/ContentSection";
 import { InstructorCard } from "@/components/InstructorCard";
 import { FrameworkList } from "@/components/FrameworkList";
-import { ProgramDetails } from "@/components/ProgramDetails";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <HeroSection />
-      
-      <ProgramDetails />
       
       <SocialProof />
 
@@ -42,7 +37,7 @@ const Index = () => {
           <p className="text-xl font-bold text-center">
             Фокус, выполнение, повторение, победа.
           </p>
-          <p>
+          <p className="text-left">
             ИИ Буткемп по Приложениям — это НЕ хак. Это про <strong>ДЕЙСТВИЕ</strong>.
           </p>
           <p>
@@ -93,17 +88,11 @@ const Index = () => {
           
           <div className="flex justify-center">
             <div className="max-w-lg">
-              <InstructorCard
-                name="Сейитбек Усманов"
-                bio="Эксперт по разработке с ИИ с опытом работы в крупных консалтинговых компаниях Deloitte, Accenture и GDIT. Создатель множества успешных проектов. Специализируется на обучении предпринимателей созданию приложений без программирования с использованием современных ИИ-инструментов."
-                photo="/lovable-uploads/89ce40cd-3a6f-4627-9f3e-5bbb3711a7f8.png"
-              />
+              <InstructorCard name="Сейитбек Усманов" bio="Эксперт по разработке с ИИ с опытом работы в крупных консалтинговых компаниях Deloitte, Accenture и GDIT. Создатель множества успешных проектов. Специализируется на обучении предпринимателей созданию приложений без программирования с использованием современных ИИ-инструментов." photo="/lovable-uploads/89ce40cd-3a6f-4627-9f3e-5bbb3711a7f8.png" />
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
