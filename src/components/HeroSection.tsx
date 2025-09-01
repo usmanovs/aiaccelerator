@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { ToolBadges } from "./ToolBadges";
+import { PaymentButton } from "./PaymentButton";
 import heroImage from "@/assets/hero-image.jpg";
 
 export const HeroSection = () => {
@@ -30,13 +30,12 @@ export const HeroSection = () => {
             Проверенная методология для превращения идеи в рабочий продукт менее чем за две недели, без написания кода.
           </p>
 
-          <Button
+          <PaymentButton
             size="lg"
-            variant="gradient"
             className="px-12 py-6 text-lg font-semibold"
           >
-            Записаться Сейчас
-          </Button>
+            Записаться Сейчас - $300
+          </PaymentButton>
         </div>
 
         <div className="relative max-w-4xl mx-auto">

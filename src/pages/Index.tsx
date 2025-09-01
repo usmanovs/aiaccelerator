@@ -3,6 +3,7 @@ import { SocialProof } from "@/components/SocialProof";
 import { ContentSection } from "@/components/ContentSection";
 import { InstructorCard } from "@/components/InstructorCard";
 import { FrameworkList } from "@/components/FrameworkList";
+import { PaymentButton } from "@/components/PaymentButton";
 const Index = () => {
   return <div className="min-h-screen">
       <HeroSection />
@@ -102,9 +103,9 @@ const Index = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Присоединяйтесь к ИИ Буткемп по Приложениям и создайте свой первый продукт за 2 недели
           </p>
-          <button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-12 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform duration-300 shadow-lg">
-            Записаться Сейчас
-          </button>
+          <PaymentButton className="px-12 py-4 text-xl font-bold hover:scale-105 transition-transform duration-300 shadow-lg">
+            Записаться Сейчас - $300
+          </PaymentButton>
         </div>
       </section>
 
