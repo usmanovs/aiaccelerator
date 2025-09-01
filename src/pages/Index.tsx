@@ -93,6 +93,20 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <section className="py-20 px-6 bg-gradient-to-r from-primary/10 to-secondary/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-4xl font-bold text-gradient mb-6">
+            Готовы Начать?
+          </h3>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Присоединяйтесь к ИИ Буткемп по Приложениям и создайте свой первый продукт за 2 недели
+          </p>
+          <button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-12 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform duration-300 shadow-lg">
+            Записаться Сейчас
+          </button>
+        </div>
+      </section>
     </div>;
 };
 export default Index;
