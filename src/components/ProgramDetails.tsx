@@ -1,3 +1,5 @@
+import { Heart, Database, CreditCard, Bot } from "lucide-react";
+
 interface DetailItemProps {
   label: string;
   value: string;
@@ -52,14 +54,23 @@ export const ProgramDetails = () => {
               <div>
                 <h4 className="text-xl font-bold text-foreground mb-4">Инструменты</h4>
                 <div className="flex flex-wrap gap-3">
-                  {['Loveable', 'Supabase', 'Stripe', 'ChatGPT'].map((tool) => (
-                    <span 
-                      key={tool}
-                      className="px-4 py-2 bg-accent/10 text-accent border border-accent/30 rounded-lg font-medium"
-                    >
-                      {tool}
-                    </span>
-                  ))}
+                  {[
+                    { name: 'Loveable', icon: Heart },
+                    { name: 'Supabase', icon: Database },
+                    { name: 'Stripe', icon: CreditCard },
+                    { name: 'ChatGPT', icon: Bot }
+                  ].map((tool) => {
+                    const IconComponent = tool.icon;
+                    return (
+                      <span 
+                        key={tool.name}
+                        className="px-4 py-2 bg-accent/10 text-accent border border-accent/30 rounded-lg font-medium flex items-center gap-2"
+                      >
+                        <IconComponent className="w-4 h-4" />
+                        {tool.name}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
 
