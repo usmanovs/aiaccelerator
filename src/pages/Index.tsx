@@ -139,7 +139,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                   <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">2</div>
                   <div>
                     <h5 className="font-bold text-lg mb-2">День 3-4: Начало Разработки</h5>
@@ -152,7 +152,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                   <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">3</div>
                   <div>
                     <h5 className="font-bold text-lg mb-2">День 5-6: Основная Функциональность</h5>
@@ -165,7 +165,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                   <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">4</div>
                   <div>
                     <h5 className="font-bold text-lg mb-2">День 7: Отладка и Исправление Ошибок</h5>
@@ -185,7 +185,7 @@ const Index = () => {
               <h4 className="text-2xl font-bold text-gradient mb-6">Неделя 2: Дизайн и Запуск</h4>
               
               <div className="grid gap-6">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                   <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">5</div>
                   <div>
                     <h5 className="font-bold text-lg mb-2">День 8-9: Дизайн и Полировка</h5>
@@ -198,7 +198,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                   <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">6</div>
                   <div>
                     <h5 className="font-bold text-lg mb-2">День 10-11: Интеграции и Платежи</h5>
@@ -211,7 +211,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                   <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">7</div>
                   <div>
                     <h5 className="font-bold text-lg mb-2">День 12-13: Деплой и SEO</h5>
@@ -224,7 +224,7 @@ const Index = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                   <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">8</div>
                   <div>
                     <h5 className="font-bold text-lg mb-2">День 14: Запуск и Следующие Шаги</h5>
