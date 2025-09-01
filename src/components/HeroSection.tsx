@@ -9,9 +9,11 @@ export const HeroSection = () => {
         <ToolBadges />
         
         <div className="mb-8">
-          <h2 className="text-lg font-semibold text-accent mb-4 tracking-wide">
-            ИИ БУТКЕМП ПО ПРИЛОЖЕНИЯМ
-          </h2>
+          <div className="inline-block border border-accent/30 bg-accent/10 px-6 py-3 rounded-lg backdrop-blur-sm">
+            <h2 className="text-lg font-semibold text-accent tracking-wide">
+              ИИ БУТКЕМП ПО ПРИЛОЖЕНИЯМ
+            </h2>
+          </div>
           <p className="text-muted-foreground text-sm mb-6">
             2 сентября - 13 сентября, 2025
           </p>
