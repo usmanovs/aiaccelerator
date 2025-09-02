@@ -107,7 +107,7 @@ const Index = () => {
             Присоединяйтесь к ИИ Буткемп по Приложениям и создайте свой первый продукт за 2 недели
           </p>
           <PaymentButton className="px-12 py-4 text-xl font-bold hover:scale-105 transition-transform duration-300 shadow-lg">
-            Записаться Сейчас - $300
+            Записаться Сейчас
           </PaymentButton>
         </div>
       </section>
@@ -379,7 +379,7 @@ const Index = () => {
                 size="lg"
                 className="px-8 py-4 text-lg font-semibold"
               >
-                Записаться на Буткемп
+                Записаться Сейчас
               </PaymentButton>
             </div>
           </div>
@@ -463,7 +463,7 @@ const Index = () => {
                   size="lg"
                   className="px-8 py-4 text-lg font-semibold"
                 >
-                  Записаться и Получить Идеи
+                  Записаться Сейчас
                 </PaymentButton>
               </div>
             </div>
