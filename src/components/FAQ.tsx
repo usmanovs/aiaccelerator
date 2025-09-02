@@ -10,12 +10,9 @@ export const FAQ = () => {
     <section className="py-20 px-6 border border-border rounded-2xl mx-6 shadow-card">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
-          <h2 className="text-6xl md:text-7xl font-bold text-orange-500 mb-6">
-            06
-          </h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Часто Задаваемые Вопросы
-          </h3>
+          </h2>
         </div>
 
         <Accordion type="single" collapsible className="w-full space-y-4">
