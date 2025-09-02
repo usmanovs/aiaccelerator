@@ -20,7 +20,7 @@ export const FAQ = () => {
             <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
               Для кого предназначена эта программа?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground/80 pt-4">
+            <AccordionContent className="text-foreground/90 pt-4">
               Программа разработана для занятых людей с основной работой или плотным графиком, 
               которые готовы изучить использование ИИ инструментов для создания приложений и 
               воплощения своих идей в жизнь, а не просто пассивно смотреть уроки.
@@ -34,7 +34,7 @@ export const FAQ = () => {
             <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
               Какой уровень сложности у этой программы?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground/80 pt-4">
+            <AccordionContent className="text-foreground/90 pt-4">
               Эта программа разработана для начинающих. Мы предоставляем пошаговое руководство 
               и поддержку, чтобы помочь вам развить навыки с нуля. Никакого опыта программирования 
               не требуется - мы используем исключительно ИИ инструменты.
@@ -45,7 +45,7 @@ export const FAQ = () => {
             <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
               Какие инструменты или подписки мне понадобятся для буткемпа?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground/80 pt-4">
+            <AccordionContent className="text-foreground/90 pt-4">
               <div className="space-y-3">
                 <p>• Рабочий компьютер или ноутбук</p>
                 <p>• <strong>Lovable Pro Plan ($25/месяц)</strong> - Основной инструмент для создания приложения. 
@@ -68,7 +68,7 @@ export const FAQ = () => {
             <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
               Нужен ли мне опыт программирования?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground/80 pt-4">
+            <AccordionContent className="text-foreground/90 pt-4">
               Абсолютно нет! Весь буткемп построен на использовании ИИ инструментов. 
               Вы научитесь "разговаривать" с ИИ для создания приложений, не написав ни строчки кода. 
               Это революционный подход, который делает разработку приложений доступной для всех.
@@ -79,7 +79,7 @@ export const FAQ = () => {
             <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
               Сколько времени нужно уделять каждый день?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground/80 pt-4">
+            <AccordionContent className="text-foreground/90 pt-4">
               Программа разработана для занятых людей. Достаточно 1-2 часов в день для прохождения 
               материала и работы над проектом. Уроки можно проходить в своем темпе, 
               но регулярность - ключ к успеху.
@@ -90,7 +90,7 @@ export const FAQ = () => {
             <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
               Что если я застряну или у меня возникнут вопросы?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground/80 pt-4">
+            <AccordionContent className="text-foreground/90 pt-4">
               У вас будет доступ к:
               <br />• Еженедельным live сессиям с инструктором для вопросов и ответов
               <br />• Приватной группе участников для взаимной поддержки
@@ -103,7 +103,7 @@ export const FAQ = () => {
             <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
               Гарантируете ли вы результат?
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground/80 pt-4">
+            <AccordionContent className="text-foreground/90 pt-4">
               Если вы пройдете все уроки и выполните задания, но не создадите рабочее приложение, 
               мы вернем 100% стоимости. Наша методология проверена - более 200 студентов уже 
               создали свои первые приложения.
