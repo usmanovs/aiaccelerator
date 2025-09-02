@@ -5,6 +5,7 @@ import { InstructorCard } from "@/components/InstructorCard";
 import { FrameworkList } from "@/components/FrameworkList";
 import { PaymentButton } from "@/components/PaymentButton";
 import { StudentsSection } from "@/components/StudentsSection";
+import { FAQ } from "@/components/FAQ";
 const Index = () => {
   return <div className="min-h-screen">
       <HeroSection />
@@ -470,6 +471,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
     </div>;
 };
 export default Index;
