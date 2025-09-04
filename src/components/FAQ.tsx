@@ -17,7 +17,7 @@ export const FAQ = () => {
 
         <Accordion type="single" collapsible className="w-full space-y-4">
           <AccordionItem value="item-1" className="border border-border rounded-lg p-4 bg-card/50">
-            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-orange-500">
+            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
               Для кого предназначена эта программа?
             </AccordionTrigger>
             <AccordionContent className="text-foreground/90 pt-4">
@@ -31,7 +31,7 @@ export const FAQ = () => {
           </AccordionItem>
 
           <AccordionItem value="item-2" className="border border-border rounded-lg p-4 bg-card/50">
-            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-orange-500">
+            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
               Какой уровень сложности у этой программы?
             </AccordionTrigger>
             <AccordionContent className="text-foreground/90 pt-4">
@@ -42,7 +42,7 @@ export const FAQ = () => {
           </AccordionItem>
 
           <AccordionItem value="item-3" className="border border-border rounded-lg p-4 bg-card/50">
-            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-orange-500">
+            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
               Какие инструменты или подписки мне понадобятся для буткемпа?
             </AccordionTrigger>
             <AccordionContent className="text-foreground/90 pt-4">
@@ -65,7 +65,7 @@ export const FAQ = () => {
           </AccordionItem>
 
           <AccordionItem value="item-4" className="border border-border rounded-lg p-4 bg-card/50">
-            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-orange-500">
+            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
               Нужен ли мне опыт программирования?
             </AccordionTrigger>
             <AccordionContent className="text-foreground/90 pt-4">
@@ -76,7 +76,7 @@ export const FAQ = () => {
           </AccordionItem>
 
           <AccordionItem value="item-5" className="border border-border rounded-lg p-4 bg-card/50">
-            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-orange-500">
+            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
               Сколько времени нужно уделять каждый день?
             </AccordionTrigger>
             <AccordionContent className="text-foreground/90 pt-4">
@@ -87,7 +87,7 @@ export const FAQ = () => {
           </AccordionItem>
 
           <AccordionItem value="item-6" className="border border-border rounded-lg p-4 bg-card/50">
-            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-orange-500">
+            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
               Что если я застряну или у меня возникнут вопросы?
             </AccordionTrigger>
             <AccordionContent className="text-foreground/90 pt-4">
@@ -100,7 +100,7 @@ export const FAQ = () => {
           </AccordionItem>
 
           <AccordionItem value="item-7" className="border border-border rounded-lg p-4 bg-card/50">
-            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-orange-500">
+            <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
               Гарантируете ли вы результат?
             </AccordionTrigger>
             <AccordionContent className="text-foreground/90 pt-4">
