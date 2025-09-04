@@ -10,7 +10,7 @@ export const FAQ = () => {
     <section className="py-20 px-6 border border-border rounded-2xl mx-6 shadow-card">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-orange-500">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Часто Задаваемые Вопросы
           </h2>
         </div>
