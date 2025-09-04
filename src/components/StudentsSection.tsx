@@ -1,8 +1,6 @@
 import { Users, GraduationCap, Star } from "lucide-react";
-
 export const StudentsSection = () => {
-  return (
-    <section className="py-20 px-6 bg-gradient-to-r from-secondary/5 to-primary/5 border border-border rounded-2xl mx-6 shadow-card">
+  return <section className="py-20 px-6 bg-gradient-to-r from-secondary/5 to-primary/5 border border-border rounded-2xl mx-6 shadow-card">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h3 className="text-4xl font-bold text-gradient mb-4">
@@ -17,11 +15,7 @@ export const StudentsSection = () => {
           {/* Students Photo */}
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-card border border-border">
-              <img 
-                src="/lovable-uploads/dea12150-3a46-462d-9026-988ed25ea9bf.png"
-                alt="Студенты Montgomery College после успешного завершения программы обучения"
-                className="w-full h-auto object-cover"
-              />
+              <img src="/lovable-uploads/dea12150-3a46-462d-9026-988ed25ea9bf.png" alt="Студенты Montgomery College после успешного завершения программы обучения" className="w-full h-auto object-cover" />
             </div>
             <div className="absolute -top-4 -right-4 bg-gradient-accent rounded-full p-3 shadow-glow">
               <GraduationCap className="w-6 h-6 text-accent-foreground" />
@@ -37,7 +31,7 @@ export const StudentsSection = () => {
                     <Users className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold text-foreground">45+</h4>
+                    <h4 className="text-2xl font-bold text-foreground">250+</h4>
                     <p className="text-muted-foreground">Успешных студентов</p>
                   </div>
                 </div>
@@ -80,6 +74,5 @@ export const StudentsSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
