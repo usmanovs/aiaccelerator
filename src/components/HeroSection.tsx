@@ -26,9 +26,13 @@ export const HeroSection = () => {
             <span className="block text-gradient">Используя Только ИИ</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed">
-            Проверенная методология для превращения идеи в рабочий продукт менее чем за две недели, без написания кода.
-          </p>
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="border border-border/30 bg-background/20 px-8 py-6 rounded-xl backdrop-blur-sm">
+              <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed">
+                Проверенная методология для превращения идеи в рабочий продукт менее чем за две недели, без написания кода.
+              </p>
+            </div>
+          </div>
 
           <PaymentButton
             size="lg"
