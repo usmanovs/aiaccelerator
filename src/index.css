@@ -142,6 +142,11 @@
   .pdf-export {
     background: white !important;
     color: black !important;
+    padding-top: 0 !important;
+  }
+
+  .pdf-export .container {
+    padding-top: 1rem !important;
   }
 
   .pdf-export .bg-card\/50,
@@ -186,5 +191,10 @@
 
   .pdf-export .links-column {
     display: none !important;
+  }
+
+  .pdf-export .mb-8 {
+    margin-bottom: 1rem !important;
+    margin-top: 0 !important;
   }
 }
