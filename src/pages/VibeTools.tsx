@@ -161,7 +161,7 @@ const VibeTools = () => {
                     <TableHead className="min-w-48 text-foreground font-semibold">Tool Name</TableHead>
                     <TableHead className="min-w-80 text-foreground font-semibold">Description</TableHead>
                     <TableHead className="min-w-80 text-foreground font-semibold">Unique Strength</TableHead>
-                    <TableHead className="w-24 text-foreground font-semibold">Links</TableHead>
+                    <TableHead className="w-24 text-foreground font-semibold links-column">Links</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -181,7 +181,7 @@ const VibeTools = () => {
                       <TableCell className="text-muted-foreground leading-relaxed">
                         {tool.strength}
                       </TableCell>
-                      <TableCell>
+                      <TableCell className="links-column">
                         <div className="flex flex-col gap-1">
                           {tool.links.slice(0, 2).map((link, index) => (
                             <a

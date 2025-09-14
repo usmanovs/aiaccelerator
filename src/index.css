@@ -183,4 +183,8 @@
   .pdf-export .pdf-hide {
     display: none !important;
   }
+
+  .pdf-export .links-column {
+    display: none !important;
+  }
 }
