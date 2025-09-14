@@ -123,11 +123,9 @@ const VibeTools = () => {
       <div id="vibe-tools-content" className="container mx-auto px-4 py-8">
         {/* Logo at top of page */}
         <div className="flex justify-center mb-6">
-          <img 
-            src="/lovable-uploads/getforce-logo.png" 
-            alt="Getforce Logo" 
-            className="h-12 md:h-16 w-auto"
-          />
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            GetForce LLC
+          </h2>
         </div>
 
         <div className="mb-8 flex items-center justify-between pdf-hide">
