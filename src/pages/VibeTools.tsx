@@ -121,7 +121,7 @@ const VibeTools = () => {
   return (
     <div className="min-h-screen bg-background">
       <div id="vibe-tools-content" className="container mx-auto px-4 py-8">
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-8 flex items-center justify-between pdf-hide">
           <Link to="/">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               <ArrowLeft className="w-4 h-4 mr-2" />
