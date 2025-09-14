@@ -137,4 +137,46 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* PDF Export Styles */
+  .pdf-export {
+    background: white !important;
+    color: black !important;
+  }
+
+  .pdf-export .bg-card\/50,
+  .pdf-export .bg-card {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  .pdf-export .text-muted-foreground {
+    color: #64748b !important;
+  }
+
+  .pdf-export .text-foreground {
+    color: #0f172a !important;
+  }
+
+  .pdf-export .text-primary {
+    color: #3b82f6 !important;
+  }
+
+  .pdf-export .border-border\/50,
+  .pdf-export .border-border {
+    border-color: #e2e8f0 !important;
+  }
+
+  .pdf-export .backdrop-blur-sm {
+    backdrop-filter: none !important;
+    background: white !important;
+  }
+
+  .pdf-export .bg-background {
+    background: white !important;
+  }
+
+  .pdf-export .bg-accent\/50 {
+    background: #f8fafc !important;
+  }
 }

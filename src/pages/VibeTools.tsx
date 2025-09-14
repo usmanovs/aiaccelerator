@@ -90,14 +90,32 @@ const tools = [
 const VibeTools = () => {
   const handleDownloadPDF = () => {
     const element = document.getElementById('vibe-tools-content');
+    
+    // Add PDF-specific styling
+    element.classList.add('pdf-export');
+    
     const opt = {
-      margin: 1,
+      margin: [0.5, 0.5, 0.5, 0.5],
       filename: 'top-10-vibe-coding-tools.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      image: { type: 'jpeg', quality: 0.95 },
+      html2canvas: { 
+        scale: 1.5,
+        useCORS: true,
+        letterRendering: true,
+        backgroundColor: '#ffffff'
+      },
+      jsPDF: { 
+        unit: 'in', 
+        format: 'a4', 
+        orientation: 'landscape',
+        compress: true
+      }
     };
-    html2pdf().set(opt).from(element).save();
+    
+    html2pdf().set(opt).from(element).save().then(() => {
+      // Remove PDF-specific styling after export
+      element.classList.remove('pdf-export');
+    });
   };
 
   return (
