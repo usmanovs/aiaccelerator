@@ -10,8 +10,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Download } from "lucide-react";
 import { Link } from "react-router-dom";
+import html2pdf from "html2pdf.js";
 
 const tools = [
   {
@@ -87,16 +88,32 @@ const tools = [
 ];
 
 const VibeTools = () => {
+  const handleDownloadPDF = () => {
+    const element = document.getElementById('vibe-tools-content');
+    const opt = {
+      margin: 1,
+      filename: 'top-10-vibe-coding-tools.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(element).save();
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-8 flex items-center gap-4">
+      <div id="vibe-tools-content" className="container mx-auto px-4 py-8">
+        <div className="mb-8 flex items-center justify-between">
           <Link to="/">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Button>
           </Link>
+          <Button onClick={handleDownloadPDF} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Download className="w-4 h-4 mr-2" />
+            Download PDF
+          </Button>
         </div>
 
         <div className="mb-8">
