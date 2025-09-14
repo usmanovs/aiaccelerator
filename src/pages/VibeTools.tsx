@@ -136,7 +136,7 @@ const VibeTools = () => {
 
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-foreground mb-4">Top 10 Vibe Coding Tools</h1>
-          <p className="text-lg text-muted-foreground max-w-3xl">
+          <p className="text-lg text-muted-foreground max-w-3xl pdf-hide">
             Discover the most powerful AI-driven development tools that are revolutionizing how we build software. 
             From natural language prompts to full-stack applications in minutes.
           </p>

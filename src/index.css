@@ -179,4 +179,8 @@
   .pdf-export .bg-accent\/50 {
     background: #f8fafc !important;
   }
+
+  .pdf-export .pdf-hide {
+    display: none !important;
+  }
 }
