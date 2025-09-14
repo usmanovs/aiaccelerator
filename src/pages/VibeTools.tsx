@@ -121,6 +121,15 @@ const VibeTools = () => {
   return (
     <div className="min-h-screen bg-background">
       <div id="vibe-tools-content" className="container mx-auto px-4 py-8">
+        {/* Logo at top of page */}
+        <div className="flex justify-center mb-6">
+          <img 
+            src="/lovable-uploads/getforce-logo.png" 
+            alt="Getforce Logo" 
+            className="h-12 md:h-16 w-auto"
+          />
+        </div>
+
         <div className="mb-8 flex items-center justify-between pdf-hide">
           <Link to="/">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
