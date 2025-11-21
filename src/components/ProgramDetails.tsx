@@ -30,8 +30,8 @@ export const ProgramDetails = () => {
 
         <div className="gradient-card rounded-2xl p-8 md:p-12 shadow-card">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <DetailItem label="Первое занятие" value="26 сентября, 2025" />
-            <DetailItem label="Demo Day" value="15 октября, 2025" />
+            <DetailItem label="Первое занятие" value="21 ноября, 2025" />
+            <DetailItem label="Demo Day" value="5 декабря, 2025" />
             <DetailItem label="Длительность" value="14 дней" />
             <DetailItem label="Дни занятий" value="Пн, Ср, Пт" />
             <DetailItem label="Время" value="4pm - 5pm NY" />
