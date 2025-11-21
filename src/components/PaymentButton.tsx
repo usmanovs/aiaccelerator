@@ -55,7 +55,7 @@ export const PaymentButton = ({ children, className, size, variant = "gradient" 
     <Button
       onClick={handlePayment}
       disabled={loading}
-      className={className}
+      className={`${className} animate-bounce hover:animate-none shadow-glow`}
       size={size}
       variant={variant}
     >
