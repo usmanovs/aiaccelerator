@@ -35,7 +35,7 @@ const PaymentSuccess = () => {
             </li>
             <li className="flex items-start gap-3">
               <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
-              Первый созвон состоится 26 сентября в 19:00 по МСК
+              Первый созвон состоится 21 ноября в 19:00 по МСК
             </li>
           </ul>
         </div>
