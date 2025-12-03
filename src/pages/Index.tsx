@@ -6,6 +6,8 @@ import { FrameworkList } from "@/components/FrameworkList";
 import { PaymentButton } from "@/components/PaymentButton";
 import { StudentsSection } from "@/components/StudentsSection";
 import { FAQ } from "@/components/FAQ";
+import instructorPhoto from "@/assets/lovable-uploads/instructor.png";
+
 const Index = () => {
   return <div className="min-h-screen">
       <HeroSection />
@@ -91,7 +93,7 @@ const Index = () => {
           
           <div className="flex justify-center">
             <div className="max-w-lg">
-              <InstructorCard name="Сейитбек Усманов" bio="Эксперт по разработке с ИИ с опытом работы в крупных консалтинговых компаниях Deloitte, Accenture и GDIT. Создатель множества успешных проектов. Специализируется на обучении предпринимателей созданию приложений без программирования с использованием современных ИИ-инструментов." photo="/lovable-uploads/89ce40cd-3a6f-4627-9f3e-5bbb3711a7f8.png" />
+              <InstructorCard name="Сейитбек Усманов" bio="Эксперт по разработке с ИИ с опытом работы в крупных консалтинговых компаниях Deloitte, Accenture и GDIT. Создатель множества успешных проектов. Специализируется на обучении предпринимателей созданию приложений без программирования с использованием современных ИИ-инструментов." photo={instructorPhoto} />
             </div>
           </div>
         </div>
