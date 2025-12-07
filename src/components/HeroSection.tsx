@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { ToolBadges } from "./ToolBadges";
 import { PaymentButton } from "./PaymentButton";
 import { ExternalLink } from "lucide-react";
@@ -34,6 +35,27 @@ const projects = [
 ];
 
 export const HeroSection = () => {
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (projectsRef.current) {
+      observer.observe(projectsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
       <div className="max-w-6xl mx-auto">
@@ -74,11 +96,11 @@ export const HeroSection = () => {
         </div>
 
         {/* Student Projects */}
-        <div className="mt-16">
-          <h3 className="text-3xl font-bold text-gradient mb-4">
+        <div ref={projectsRef} className="mt-16">
+          <h3 className={`text-3xl font-bold text-gradient mb-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Проекты Студентов
           </h3>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+          <p className={`text-lg text-muted-foreground max-w-2xl mx-auto mb-10 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Реальные приложения, созданные выпускниками нашего буткемпа
           </p>
 
@@ -89,7 +111,8 @@ export const HeroSection = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block"
+                className={`group block transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                style={{ transitionDelay: isVisible ? `${200 + index * 100}ms` : '0ms' }}
               >
                 <div className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
                   <div className="aspect-video relative overflow-hidden">
