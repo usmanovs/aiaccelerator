@@ -8,6 +8,7 @@ import { FAQ } from "@/components/FAQ";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ContactSection } from "@/components/ContactSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 const Index = () => {
   return <div className="min-h-screen">
       <WhatsAppButton />
@@ -424,6 +425,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <TestimonialsSection />
 
       <ContactSection />
 
