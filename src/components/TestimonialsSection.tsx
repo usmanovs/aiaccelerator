@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { AnimatedSection } from "./AnimatedSection";
 import {
   Carousel,
@@ -8,6 +8,7 @@ import {
   CarouselNext,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import testimonial1 from "@/assets/testimonials/testimonial-1.png";
 import testimonial2 from "@/assets/testimonials/testimonial-2.png";
 import testimonial3 from "@/assets/testimonials/testimonial-3.png";
@@ -27,6 +28,9 @@ const testimonials = [
 export const TestimonialsSection = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -71,6 +75,7 @@ export const TestimonialsSection = () => {
                 skipSnaps: false,
                 align: "center",
               }}
+              plugins={[autoplayPlugin.current]}
               className="w-full touch-pan-y"
             >
               <CarouselContent>
