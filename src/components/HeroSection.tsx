@@ -31,6 +31,13 @@ const projects = [
     url: "https://roadtalk-english.com/",
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop",
     category: "EdTech"
+  },
+  {
+    name: "NoSmoking",
+    description: "Приложение для отказа от курения",
+    url: "https://preview-10a31f29--nosmoking.lovable.app/",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop",
+    category: "Здоровье"
   }
 ];
 
