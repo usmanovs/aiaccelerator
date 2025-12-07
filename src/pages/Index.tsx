@@ -6,9 +6,11 @@ import { FrameworkList } from "@/components/FrameworkList";
 import { PaymentButton } from "@/components/PaymentButton";
 import { FAQ } from "@/components/FAQ";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   return <div className="min-h-screen">
+      <WhatsAppButton />
       <HeroSection />
       
       <SocialProof />
