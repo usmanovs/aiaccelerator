@@ -8,24 +8,26 @@ import profile7 from "@/assets/profiles/profile-7.jpg";
 import profile8 from "@/assets/profiles/profile-8.jpg";
 import profile9 from "@/assets/profiles/profile-9.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const SocialProof = () => {
   const { ref, isVisible } = useScrollAnimation(0.1);
+  const { t } = useLanguage();
   
   const avatars = [
-    { id: 1, name: "Участник 1", image: profile1 },
-    { id: 2, name: "Участник 2", image: profile2 },
-    { id: 3, name: "Участник 3", image: profile3 },
-    { id: 4, name: "Участник 4", image: profile4 },
-    { id: 5, name: "Участник 5", image: profile5 },
-    { id: 6, name: "Участник 6", image: profile6 },
-    { id: 7, name: "Участник 7", image: profile7 },
-    { id: 8, name: "Участник 8", image: profile8 },
-    { id: 9, name: "Участник 9", image: profile9 },
+    { id: 1, name: "Participant 1", image: profile1 },
+    { id: 2, name: "Participant 2", image: profile2 },
+    { id: 3, name: "Participant 3", image: profile3 },
+    { id: 4, name: "Participant 4", image: profile4 },
+    { id: 5, name: "Participant 5", image: profile5 },
+    { id: 6, name: "Participant 6", image: profile6 },
+    { id: 7, name: "Participant 7", image: profile7 },
+    { id: 8, name: "Participant 8", image: profile8 },
+    { id: 9, name: "Participant 9", image: profile9 },
   ];
 
   return (
-    <section ref={ref} className="py-16 px-6">
+    <section ref={ref} className="py-16 px-6" dir={t.dir}>
       <div className="max-w-4xl mx-auto text-center">
         <div className={`flex justify-center items-center mb-6 -space-x-2 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {avatars.map((avatar, index) => (
@@ -45,13 +47,13 @@ export const SocialProof = () => {
         
         <div className={`text-center transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-2xl md:text-3xl font-bold mb-2">
-            Присоединяйтесь к <span className="text-gradient">10,067 разработчикам</span>
+            {t.socialProof.join} <span className="text-gradient">{t.socialProof.developers}</span>
           </p>
           <p className="text-lg text-muted-foreground">
-            создающим приложения с ИИ
+            {t.socialProof.building}
           </p>
           <p className="text-lg text-muted-foreground">
-            без программистов и дизайнеров.
+            {t.socialProof.without}
           </p>
         </div>
       </div>
