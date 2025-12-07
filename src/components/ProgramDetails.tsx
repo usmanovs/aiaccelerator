@@ -33,8 +33,8 @@ export const ProgramDetails = () => {
             <DetailItem label="Первое занятие" value="21 ноября, 2025" />
             <DetailItem label="Demo Day" value="5 декабря, 2025" />
             <DetailItem label="Длительность" value="14 дней" />
-            <DetailItem label="Дни занятий" value="Пн, Ср, Пт" />
-            <DetailItem label="Время" value="4pm - 5pm NY" />
+            <DetailItem label="Дни занятий" value="3 дня/неделю (Пн, Ср, Пт)" />
+            <DetailItem label="Длительность занятия" value="1 час (4pm - 5pm NY)" />
             <DetailItem label="Цель" value="$10,000/месяц" highlight />
             <DetailItem label="Стоимость" value="$300" highlight />
             <DetailItem label="Инструктор" value="Seyitbek Usmanov" />
