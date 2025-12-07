@@ -76,11 +76,11 @@ export const TestimonialsSection = () => {
               <CarouselContent>
                 {testimonials.map((testimonial) => (
                   <CarouselItem key={testimonial.id}>
-                    <div className="rounded-xl overflow-hidden border border-border shadow-card hover:shadow-glow transition-all duration-300">
+                    <div className="rounded-xl overflow-hidden border border-border shadow-card hover:shadow-glow transition-all duration-300 bg-card">
                       <img
                         src={testimonial.image}
                         alt={`Отзыв студента ${testimonial.id}`}
-                        className="w-full h-auto"
+                        className="w-full h-auto object-contain"
                       />
                     </div>
                   </CarouselItem>
