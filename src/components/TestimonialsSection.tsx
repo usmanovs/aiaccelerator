@@ -65,8 +65,13 @@ export const TestimonialsSection = () => {
           <div className="px-12">
             <Carousel
               setApi={setApi}
-              opts={{ loop: true }}
-              className="w-full"
+              opts={{ 
+                loop: true,
+                dragFree: false,
+                skipSnaps: false,
+                align: "center",
+              }}
+              className="w-full touch-pan-y"
             >
               <CarouselContent>
                 {testimonials.map((testimonial) => (
