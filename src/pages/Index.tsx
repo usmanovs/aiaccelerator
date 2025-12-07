@@ -13,6 +13,7 @@ const Index = () => {
       
       <SocialProof />
 
+      <StudentProjects />
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -32,10 +33,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <StudentsSection />
-
-      <StudentProjects />
 
       <section className="py-20 px-6 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="max-w-4xl mx-auto text-center">
