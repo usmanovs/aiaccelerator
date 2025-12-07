@@ -2,11 +2,13 @@ import { AnimatedSection } from "./AnimatedSection";
 import testimonial1 from "@/assets/testimonials/testimonial-1.png";
 import testimonial2 from "@/assets/testimonials/testimonial-2.png";
 import testimonial3 from "@/assets/testimonials/testimonial-3.png";
+import testimonial4 from "@/assets/testimonials/testimonial-4.png";
 
 const testimonials = [
   { id: 1, image: testimonial1 },
   { id: 2, image: testimonial2 },
   { id: 3, image: testimonial3 },
+  { id: 4, image: testimonial4 },
 ];
 
 export const TestimonialsSection = () => {
