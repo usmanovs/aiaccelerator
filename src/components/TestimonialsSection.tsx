@@ -1,4 +1,13 @@
+import { useState, useEffect, useCallback } from "react";
 import { AnimatedSection } from "./AnimatedSection";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import testimonial1 from "@/assets/testimonials/testimonial-1.png";
 import testimonial2 from "@/assets/testimonials/testimonial-2.png";
 import testimonial3 from "@/assets/testimonials/testimonial-3.png";
@@ -16,6 +25,28 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      api?.scrollTo(index);
+    },
+    [api]
+  );
+
   return (
     <section className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
@@ -31,19 +62,44 @@ export const TestimonialsSection = () => {
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <div className="grid gap-6">
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="rounded-xl overflow-hidden border border-border shadow-card hover:shadow-glow transition-all duration-300"
-              >
-                <img
-                  src={testimonial.image}
-                  alt={`Отзыв студента ${testimonial.id}`}
-                  className="w-full h-auto"
+          <div className="px-12">
+            <Carousel
+              setApi={setApi}
+              opts={{ loop: true }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial) => (
+                  <CarouselItem key={testimonial.id}>
+                    <div className="rounded-xl overflow-hidden border border-border shadow-card hover:shadow-glow transition-all duration-300">
+                      <img
+                        src={testimonial.image}
+                        alt={`Отзыв студента ${testimonial.id}`}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-0 -translate-x-full" />
+              <CarouselNext className="right-0 translate-x-full" />
+            </Carousel>
+
+            {/* Navigation Dots */}
+            <div className="flex justify-center gap-2 mt-6">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollTo(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    index === current
+                      ? "bg-primary w-6"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </AnimatedSection>
       </div>
