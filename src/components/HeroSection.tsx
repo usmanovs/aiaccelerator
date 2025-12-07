@@ -1,6 +1,5 @@
 import { ToolBadges } from "./ToolBadges";
 import { PaymentButton } from "./PaymentButton";
-import heroImage from "@/assets/hero-image.jpg";
 
 export const HeroSection = () => {
   return (
@@ -40,16 +39,6 @@ export const HeroSection = () => {
           >
             Записаться Сейчас
           </PaymentButton>
-        </div>
-
-        <div className="relative max-w-4xl mx-auto">
-          <div className="overflow-hidden rounded-2xl shadow-card">
-            <img
-              src={heroImage}
-              alt="Профессионал работает над приложением"
-              className="w-full h-auto object-cover"
-            />
-          </div>
         </div>
       </div>
     </section>
