@@ -4,16 +4,12 @@ import { ContentSection } from "@/components/ContentSection";
 import { InstructorCard } from "@/components/InstructorCard";
 import { FrameworkList } from "@/components/FrameworkList";
 import { PaymentButton } from "@/components/PaymentButton";
-import { StudentsSection } from "@/components/StudentsSection";
-import { StudentProjects } from "@/components/StudentProjects";
 import { FAQ } from "@/components/FAQ";
 const Index = () => {
   return <div className="min-h-screen">
       <HeroSection />
       
       <SocialProof />
-
-      <StudentProjects />
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
