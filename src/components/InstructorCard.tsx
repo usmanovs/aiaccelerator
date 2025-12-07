@@ -1,4 +1,5 @@
 import { Youtube, Linkedin, Instagram, Music } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface InstructorCardProps {
   name: string;
@@ -8,9 +9,14 @@ interface InstructorCardProps {
 }
 
 export const InstructorCard = ({ name, bio, avatar, photo }: InstructorCardProps) => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+
   return (
-    <div className="gradient-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105">
-      <div className="flex items-center mb-6">
+    <div 
+      ref={ref}
+      className={`gradient-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-500 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+    >
+      <div className={`flex items-center mb-6 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
         {photo ? (
           <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-accent mr-6">
             <img 
@@ -29,9 +35,9 @@ export const InstructorCard = ({ name, bio, avatar, photo }: InstructorCardProps
         </div>
       </div>
       
-      <p className="text-muted-foreground leading-relaxed mb-6">{bio}</p>
+      <p className={`text-muted-foreground leading-relaxed mb-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>{bio}</p>
       
-      <div className="flex gap-4">
+      <div className={`flex gap-4 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <a 
           href="https://www.youtube.com/@seyitbek" 
           target="_blank" 
