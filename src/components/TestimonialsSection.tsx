@@ -4,6 +4,7 @@ import testimonial2 from "@/assets/testimonials/testimonial-2.png";
 import testimonial3 from "@/assets/testimonials/testimonial-3.png";
 import testimonial4 from "@/assets/testimonials/testimonial-4.png";
 import testimonial5 from "@/assets/testimonials/testimonial-5.png";
+import testimonial6 from "@/assets/testimonials/testimonial-6.png";
 
 const testimonials = [
   { id: 1, image: testimonial1 },
@@ -11,6 +12,7 @@ const testimonials = [
   { id: 3, image: testimonial3 },
   { id: 4, image: testimonial4 },
   { id: 5, image: testimonial5 },
+  { id: 6, image: testimonial6 },
 ];
 
 export const TestimonialsSection = () => {
