@@ -7,9 +7,11 @@ import profile6 from "@/assets/profiles/profile-6.jpg";
 import profile7 from "@/assets/profiles/profile-7.jpg";
 import profile8 from "@/assets/profiles/profile-8.jpg";
 import profile9 from "@/assets/profiles/profile-9.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const SocialProof = () => {
-  // Profile images for diverse participants
+  const { ref, isVisible } = useScrollAnimation(0.1);
+  
   const avatars = [
     { id: 1, name: "Участник 1", image: profile1 },
     { id: 2, name: "Участник 2", image: profile2 },
@@ -23,13 +25,14 @@ export const SocialProof = () => {
   ];
 
   return (
-    <section className="py-16 px-6">
+    <section ref={ref} className="py-16 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="flex justify-center items-center mb-6 -space-x-2">
-          {avatars.map((avatar) => (
+        <div className={`flex justify-center items-center mb-6 -space-x-2 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {avatars.map((avatar, index) => (
             <div
               key={avatar.id}
-              className="w-12 h-12 rounded-full border-2 border-background overflow-hidden shadow-card hover:scale-110 transition-smooth"
+              className={`w-12 h-12 rounded-full border-2 border-background overflow-hidden shadow-card hover:scale-110 transition-all duration-500`}
+              style={{ transitionDelay: isVisible ? `${index * 50}ms` : '0ms' }}
             >
               <img
                 src={avatar.image}
@@ -40,7 +43,7 @@ export const SocialProof = () => {
           ))}
         </div>
         
-        <div className="text-center">
+        <div className={`text-center transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-2xl md:text-3xl font-bold mb-2">
             Присоединяйтесь к <span className="text-gradient">10,067 разработчикам</span>
           </p>
