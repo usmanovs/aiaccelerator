@@ -7,7 +7,6 @@ import { PaymentButton } from "@/components/PaymentButton";
 import { FAQ } from "@/components/FAQ";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-
 const Index = () => {
   return <div className="min-h-screen">
       <WhatsAppButton />
@@ -205,8 +204,7 @@ const Index = () => {
                     </li>
                   </ul>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <li className="flex items-center gap-2">Приватное сообщество в Discord<div className="w-2 h-2 bg-secondary rounded-full"></div>
                       Приватное сообщество в Telegram
                     </li>
                     <li className="flex items-center gap-2">
@@ -331,10 +329,7 @@ const Index = () => {
               <p className="text-muted-foreground mb-6">
                 Выберите идею и воплотите её в жизнь за 14 дней
               </p>
-              <PaymentButton
-                size="lg"
-                className="px-8 py-4 text-lg font-semibold"
-              >
+              <PaymentButton size="lg" className="px-8 py-4 text-lg font-semibold">
                 Записаться Сейчас
               </PaymentButton>
             </div>
@@ -415,10 +410,7 @@ const Index = () => {
                 Которые реально можно реализовать на Lovable за 1-2 дня с примерным уровнем дохода
               </p>
               <div className="text-center">
-                <PaymentButton
-                  size="lg"
-                  className="px-8 py-4 text-lg font-semibold"
-                >
+                <PaymentButton size="lg" className="px-8 py-4 text-lg font-semibold">
                   Записаться Сейчас
                 </PaymentButton>
               </div>
