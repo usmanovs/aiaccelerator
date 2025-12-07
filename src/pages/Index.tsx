@@ -189,30 +189,35 @@ const Index = () => {
               <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8 text-center">
                 <h4 className="text-2xl font-bold mb-4">Что Включено</h4>
                 <div className="grid md:grid-cols-2 gap-4 text-left">
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full shrink-0"></div>
                       14-дневный онлайн буткемп
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full shrink-0"></div>
                       Еженедельные групповые созвоны
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full shrink-0"></div>
                       Доступ к системе Deep Work OS
                     </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full shrink-0"></div>
+                      Приватное сообщество в Discord
+                    </li>
                   </ul>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">Приватное сообщество в Discord<div className="w-2 h-2 bg-secondary rounded-full"></div>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-secondary rounded-full shrink-0"></div>
                       Приватное сообщество в Telegram
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-secondary rounded-full shrink-0"></div>
                       Пожизненный доступ к материалам
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-secondary rounded-full shrink-0"></div>
                       Персональная поддержка инструктора
                     </li>
                   </ul>
