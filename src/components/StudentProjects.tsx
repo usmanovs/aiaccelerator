@@ -9,6 +9,13 @@ const projects = [
     category: "Архитектура"
   },
   {
+    name: "Climbley",
+    description: "Grow Your Audience with AI Coaching",
+    url: "https://climbley.com/",
+    image: "https://climbley.com/assets/1-hYsSMKCc.jpg",
+    category: "SaaS"
+  },
+  {
     name: "AI Studio App",
     description: "Интерактивное AI приложение для работы с данными",
     url: "https://ai.studio/apps/drive/1OmJo4lNYRXjvNdPv4YLSy0sHG5go8R9L?fullscreenApplet=true",
