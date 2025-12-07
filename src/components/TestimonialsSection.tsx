@@ -15,6 +15,7 @@ import testimonial3 from "@/assets/testimonials/testimonial-3.png";
 import testimonial4 from "@/assets/testimonials/testimonial-4.png";
 import testimonial5 from "@/assets/testimonials/testimonial-5.png";
 import testimonial6 from "@/assets/testimonials/testimonial-6.png";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const testimonials = [
   { id: 1, image: testimonial1 },
@@ -32,6 +33,7 @@ export const TestimonialsSection = () => {
     Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
   const [count, setCount] = useState(0);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (!api) return;
@@ -52,15 +54,15 @@ export const TestimonialsSection = () => {
   );
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6" dir={t.dir}>
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold text-gradient mb-4">
-              Отзывы Студентов
+              {t.testimonials.title}
             </h3>
             <p className="text-xl text-muted-foreground">
-              Что говорят наши участники
+              {t.testimonials.subtitle}
             </p>
           </div>
         </AnimatedSection>
@@ -84,7 +86,7 @@ export const TestimonialsSection = () => {
                     <div className="rounded-xl overflow-hidden border border-border shadow-card hover:shadow-glow transition-all duration-300 bg-card aspect-[4/3] flex items-center justify-center">
                       <img
                         src={testimonial.image}
-                        alt={`Отзыв студента ${testimonial.id}`}
+                        alt={`${t.testimonials.altText} ${testimonial.id}`}
                         className="w-full h-full object-contain"
                       />
                     </div>

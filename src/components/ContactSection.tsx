@@ -1,41 +1,44 @@
 import { MessageCircle, Send, Instagram } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
-
-const contacts = [
-  {
-    name: "WhatsApp",
-    description: "Напишите нам напрямую",
-    href: "https://wa.me/12024554575",
-    icon: MessageCircle,
-    color: "bg-green-500/10 text-green-500 border-green-500/30",
-  },
-  {
-    name: "Telegram",
-    description: "@salesforcecareer",
-    href: "https://t.me/salesforcecareer",
-    icon: Send,
-    color: "bg-blue-500/10 text-blue-500 border-blue-500/30",
-  },
-  {
-    name: "Instagram",
-    description: "@getforce_bootcamp",
-    href: "https://www.instagram.com/getforce_bootcamp/",
-    icon: Instagram,
-    color: "bg-pink-500/10 text-pink-500 border-pink-500/30",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const ContactSection = () => {
+  const { t } = useLanguage();
+
+  const contacts = [
+    {
+      name: "WhatsApp",
+      description: t.contact.whatsapp,
+      href: "https://wa.me/12024554575",
+      icon: MessageCircle,
+      color: "bg-green-500/10 text-green-500 border-green-500/30",
+    },
+    {
+      name: "Telegram",
+      description: t.contact.telegram,
+      href: "https://t.me/salesforcecareer",
+      icon: Send,
+      color: "bg-blue-500/10 text-blue-500 border-blue-500/30",
+    },
+    {
+      name: "Instagram",
+      description: t.contact.instagram,
+      href: "https://www.instagram.com/getforce_bootcamp/",
+      icon: Instagram,
+      color: "bg-pink-500/10 text-pink-500 border-pink-500/30",
+    },
+  ];
+
   return (
-    <section className="py-16 px-6">
+    <section className="py-16 px-6" dir={t.dir}>
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gradient mb-4">
-              Свяжитесь с Нами
+              {t.contact.title}
             </h3>
             <p className="text-muted-foreground">
-              Есть вопросы? Мы всегда на связи
+              {t.contact.subtitle}
             </p>
           </div>
         </AnimatedSection>
