@@ -12,18 +12,6 @@ import VibeTools from "./pages/VibeTools";
 
 const queryClient = new QueryClient();
 
-const LocalizedRoutes = () => (
-  <LanguageProvider>
-    <Routes>
-      <Route path="/" element={<Index />} />
-      <Route path="/vibe-tools" element={<VibeTools />} />
-      <Route path="/payment-success" element={<PaymentSuccess />} />
-      <Route path="/payment-canceled" element={<PaymentCanceled />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  </LanguageProvider>
-);
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -35,7 +23,10 @@ const App = () => (
           <Route path="/" element={<Navigate to="/en" replace />} />
           
           {/* Language-prefixed routes */}
-          <Route path="/:lang/*" element={<LocalizedRoutes />} />
+          <Route path="/:lang" element={<LanguageProvider><Index /></LanguageProvider>} />
+          <Route path="/:lang/vibe-tools" element={<LanguageProvider><VibeTools /></LanguageProvider>} />
+          <Route path="/:lang/payment-success" element={<LanguageProvider><PaymentSuccess /></LanguageProvider>} />
+          <Route path="/:lang/payment-canceled" element={<LanguageProvider><PaymentCanceled /></LanguageProvider>} />
           
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
