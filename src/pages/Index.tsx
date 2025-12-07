@@ -204,13 +204,13 @@ const Index = () => {
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full shrink-0"></div>
-                      Приватное сообщество в Discord
+                      3 занятия в неделю по 1 часу
                     </li>
                   </ul>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-secondary rounded-full shrink-0"></div>
-                      Приватное сообщество в Telegram
+                      Приватное сообщество в Discord
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-secondary rounded-full shrink-0"></div>
