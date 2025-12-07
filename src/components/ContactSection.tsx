@@ -18,8 +18,8 @@ const contacts = [
   },
   {
     name: "Instagram",
-    description: "@seyitbek",
-    href: "https://www.instagram.com/seyitbek/",
+    description: "@getforce_bootcamp",
+    href: "https://www.instagram.com/getforce_bootcamp/",
     icon: Instagram,
     color: "bg-pink-500/10 text-pink-500 border-pink-500/30",
   },
