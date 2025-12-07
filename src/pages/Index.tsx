@@ -9,15 +9,12 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ContactSection } from "@/components/ContactSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
-import { StudentProjects } from "@/components/StudentProjects";
 const Index = () => {
   return <div className="min-h-screen">
       <WhatsAppButton />
       <HeroSection />
       
       <SocialProof />
-
-      <StudentProjects />
 
       <TestimonialsSection />
 
