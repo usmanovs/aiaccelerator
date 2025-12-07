@@ -5,6 +5,7 @@ import { InstructorCard } from "@/components/InstructorCard";
 import { FrameworkList } from "@/components/FrameworkList";
 import { PaymentButton } from "@/components/PaymentButton";
 import { StudentsSection } from "@/components/StudentsSection";
+import { StudentProjects } from "@/components/StudentProjects";
 import { FAQ } from "@/components/FAQ";
 const Index = () => {
   return <div className="min-h-screen">
@@ -98,6 +99,8 @@ const Index = () => {
       </section>
 
       <StudentsSection />
+
+      <StudentProjects />
 
       <section className="py-20 px-6 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="max-w-4xl mx-auto text-center">
