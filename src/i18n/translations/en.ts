@@ -16,7 +16,7 @@ export const en = {
     title1: "Transform Your Idea",
     title2: "Into a Real App",
     title3: "Using Only AI",
-    description: "A proven methodology for turning ideas into working products in less than two weeks, without writing code.",
+    description: "Finally turn that app idea into reality within 10 days before someone else does.",
     cta: "Enroll Now",
     projectsTitle: "Student Projects",
     projectsSubtitle: "Real applications built by our bootcamp graduates"
