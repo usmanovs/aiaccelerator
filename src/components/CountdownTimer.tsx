@@ -46,7 +46,7 @@ export const CountdownTimer = () => {
 
   const TimeBlock = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-accent/20 border border-accent/30 rounded-lg px-3 py-2 md:px-4 md:py-3 min-w-[60px] md:min-w-[80px]">
+      <div className="bg-accent/20 border border-accent/30 rounded-lg px-3 py-2 md:px-4 md:py-3 min-w-[60px] md:min-w-[80px] animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] shadow-[0_0_15px_rgba(var(--accent-rgb),0.3)]">
         <span className="text-2xl md:text-4xl font-bold text-accent tabular-nums">
           {String(value).padStart(2, "0")}
         </span>
