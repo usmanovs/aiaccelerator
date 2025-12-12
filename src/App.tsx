@@ -19,8 +19,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* Redirect root to English */}
-          <Route path="/" element={<Navigate to="/en" replace />} />
+          {/* Redirect root to Russian */}
+          <Route path="/" element={<Navigate to="/ru" replace />} />
           
           {/* Language-prefixed routes */}
           <Route path="/:lang" element={<LanguageProvider><Index /></LanguageProvider>} />
