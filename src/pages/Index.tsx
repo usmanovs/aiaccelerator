@@ -8,16 +8,15 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ContactSection } from "@/components/ContactSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { useLanguage } from "@/i18n/LanguageContext";
-
 const Index = () => {
-  const { t } = useLanguage();
-
-  return (
-    <div className="min-h-screen" dir={t.dir}>
+  const {
+    t
+  } = useLanguage();
+  return <div className="min-h-screen" dir={t.dir}>
       <WhatsAppButton />
       <HeroSection />
       
-      <SocialProof />
+      
 
       <TestimonialsSection />
 
@@ -36,11 +35,7 @@ const Index = () => {
           
           <div className="flex justify-center">
             <div className="max-w-lg">
-              <InstructorCard 
-                name={t.instructor.name} 
-                bio={t.instructor.bio} 
-                photo="/lovable-uploads/89ce40cd-3a6f-4627-9f3e-5bbb3711a7f8.png" 
-              />
+              <InstructorCard name={t.instructor.name} bio={t.instructor.bio} photo="/lovable-uploads/89ce40cd-3a6f-4627-9f3e-5bbb3711a7f8.png" />
             </div>
           </div>
         </div>
@@ -85,9 +80,7 @@ const Index = () => {
                     <div>
                       <h5 className="font-bold text-lg mb-2">{t.program.week1.day1.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week1.day1.items.map((item, i) => (
-                          <li key={i}>• {item}</li>
-                        ))}
+                        {t.program.week1.day1.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
@@ -97,9 +90,7 @@ const Index = () => {
                     <div>
                       <h5 className="font-bold text-lg mb-2">{t.program.week1.day2.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week1.day2.items.map((item, i) => (
-                          <li key={i}>• {item}</li>
-                        ))}
+                        {t.program.week1.day2.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
@@ -109,9 +100,7 @@ const Index = () => {
                     <div>
                       <h5 className="font-bold text-lg mb-2">{t.program.week1.day3.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week1.day3.items.map((item, i) => (
-                          <li key={i}>• {item}</li>
-                        ))}
+                        {t.program.week1.day3.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
@@ -121,9 +110,7 @@ const Index = () => {
                     <div>
                       <h5 className="font-bold text-lg mb-2">{t.program.week1.day4.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week1.day4.items.map((item, i) => (
-                          <li key={i}>• {item}</li>
-                        ))}
+                        {t.program.week1.day4.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
@@ -142,9 +129,7 @@ const Index = () => {
                     <div>
                       <h5 className="font-bold text-lg mb-2">{t.program.week2.day1.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week2.day1.items.map((item, i) => (
-                          <li key={i}>• {item}</li>
-                        ))}
+                        {t.program.week2.day1.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
@@ -154,9 +139,7 @@ const Index = () => {
                     <div>
                       <h5 className="font-bold text-lg mb-2">{t.program.week2.day2.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week2.day2.items.map((item, i) => (
-                          <li key={i}>• {item}</li>
-                        ))}
+                        {t.program.week2.day2.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
@@ -166,9 +149,7 @@ const Index = () => {
                     <div>
                       <h5 className="font-bold text-lg mb-2">{t.program.week2.day3.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week2.day3.items.map((item, i) => (
-                          <li key={i}>• {item}</li>
-                        ))}
+                        {t.program.week2.day3.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
@@ -178,9 +159,7 @@ const Index = () => {
                     <div>
                       <h5 className="font-bold text-lg mb-2">{t.program.week2.day4.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week2.day4.items.map((item, i) => (
-                          <li key={i}>• {item}</li>
-                        ))}
+                        {t.program.week2.day4.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
@@ -193,20 +172,16 @@ const Index = () => {
                 <h4 className="text-2xl font-bold mb-4">{t.program.included.title}</h4>
                 <div className="grid md:grid-cols-2 gap-4 text-left">
                   <ul className="space-y-3">
-                    {t.program.included.items.slice(0, 4).map((item, i) => (
-                      <li key={i} className="flex items-center gap-3">
+                    {t.program.included.items.slice(0, 4).map((item, i) => <li key={i} className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-primary rounded-full shrink-0"></div>
                         {item}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                   <ul className="space-y-3">
-                    {t.program.included.items.slice(4).map((item, i) => (
-                      <li key={i} className="flex items-center gap-3">
+                    {t.program.included.items.slice(4).map((item, i) => <li key={i} className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-secondary rounded-full shrink-0"></div>
                         {item}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
               </div>
@@ -238,9 +213,7 @@ const Index = () => {
                 <div className="space-y-4">
                   <div className="bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                     <ul className="text-muted-foreground space-y-2">
-                      {t.appIdeas.saas.items.map((item, i) => (
-                        <li key={i}>• {item}</li>
-                      ))}
+                      {t.appIdeas.saas.items.map((item, i) => <li key={i}>• {item}</li>)}
                     </ul>
                     <div className="mt-4 p-3 bg-primary/10 rounded border border-primary/20">
                       <span className="text-sm font-medium">{t.appIdeas.saas.monetization}</span>
@@ -258,9 +231,7 @@ const Index = () => {
                 <div className="space-y-4">
                   <div className="bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                     <ul className="text-muted-foreground space-y-2">
-                      {t.appIdeas.marketplaces.items.map((item, i) => (
-                        <li key={i}>• {item}</li>
-                      ))}
+                      {t.appIdeas.marketplaces.items.map((item, i) => <li key={i}>• {item}</li>)}
                     </ul>
                     <div className="mt-4 p-3 bg-accent/10 rounded border border-accent/20">
                       <span className="text-sm font-medium">{t.appIdeas.marketplaces.monetization}</span>
@@ -278,9 +249,7 @@ const Index = () => {
                 <div className="space-y-4">
                   <div className="bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                     <ul className="text-muted-foreground space-y-2">
-                      {t.appIdeas.ai.items.map((item, i) => (
-                        <li key={i}>• {item}</li>
-                      ))}
+                      {t.appIdeas.ai.items.map((item, i) => <li key={i}>• {item}</li>)}
                     </ul>
                     <div className="mt-4 p-3 bg-secondary/10 rounded border border-secondary/20">
                       <span className="text-sm font-medium">{t.appIdeas.ai.monetization}</span>
@@ -298,9 +267,7 @@ const Index = () => {
                 <div className="space-y-4">
                   <div className="bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
                     <ul className="text-muted-foreground space-y-2">
-                      {t.appIdeas.mobile.items.map((item, i) => (
-                        <li key={i}>• {item}</li>
-                      ))}
+                      {t.appIdeas.mobile.items.map((item, i) => <li key={i}>• {item}</li>)}
                     </ul>
                     <div className="mt-4 p-3 bg-gradient-to-r from-primary/10 to-accent/10 rounded border border-primary/20">
                       <span className="text-sm font-medium">{t.appIdeas.mobile.monetization}</span>
@@ -411,7 +378,6 @@ const Index = () => {
       <ContactSection />
 
       <FAQ />
-    </div>
-  );
+    </div>;
 };
 export default Index;
