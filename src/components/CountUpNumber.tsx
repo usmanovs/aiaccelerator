@@ -5,15 +5,17 @@ interface CountUpNumberProps {
   suffix?: string;
   duration?: number;
   inView: boolean;
+  delay?: number;
 }
 
 export const CountUpNumber = ({ 
   value, 
   suffix = "", 
   duration = 2000, 
-  inView 
+  inView,
+  delay = 0
 }: CountUpNumberProps) => {
-  const count = useCountUp({ end: value, duration, start: inView });
+  const count = useCountUp({ end: value, duration, start: inView, delay });
 
   return (
     <span>
