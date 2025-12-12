@@ -187,21 +187,36 @@ export const HeroSection = () => {
               <div className="text-3xl md:text-4xl font-bold text-gradient">
                 <CountUpNumber value={500} suffix="+" duration={2000} inView={statsVisible} delay={0} />
               </div>
-              <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsApps}</div>
+              <div 
+                className={`text-sm md:text-base text-muted-foreground transition-all duration-500 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+                style={{ transitionDelay: '0ms' }}
+              >
+                {t.hero.statsApps}
+              </div>
             </div>
             <div className="w-px h-12 bg-border/50" />
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-gradient">
                 <CountUpNumber value={10} duration={1500} inView={statsVisible} delay={200} />
               </div>
-              <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsDays}</div>
+              <div 
+                className={`text-sm md:text-base text-muted-foreground transition-all duration-500 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+                style={{ transitionDelay: '200ms' }}
+              >
+                {t.hero.statsDays}
+              </div>
             </div>
             <div className="w-px h-12 bg-border/50" />
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-gradient">
                 <CountUpNumber value={0} duration={500} inView={statsVisible} delay={400} />
               </div>
-              <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsCode}</div>
+              <div 
+                className={`text-sm md:text-base text-muted-foreground transition-all duration-500 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+                style={{ transitionDelay: '400ms' }}
+              >
+                {t.hero.statsCode}
+              </div>
             </div>
           </div>
         </div>
