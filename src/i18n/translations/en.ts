@@ -18,6 +18,9 @@ export const en = {
     title3: "Using Only AI",
     description: "Finally turn that app idea into reality within 10 days before someone else does.",
     cta: "Enroll Now",
+    statsApps: "Apps Built",
+    statsDays: "Day Average",
+    statsCode: "Lines of Code",
     projectsTitle: "Student Projects",
     projectsSubtitle: "Real applications built by our bootcamp graduates"
   },
