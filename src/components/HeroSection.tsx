@@ -68,7 +68,21 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center" dir={t.dir}>
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center overflow-hidden" dir={t.dir}>
+      {/* Floating Gradient Orbs */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Large primary orb - top left */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float-slow" />
+        {/* Accent orb - top right */}
+        <div className="absolute -top-20 -right-20 w-72 h-72 bg-accent/15 rounded-full blur-3xl animate-float-slower" style={{ animationDelay: '2s' }} />
+        {/* Medium primary orb - bottom left */}
+        <div className="absolute bottom-20 -left-20 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-float-slower" style={{ animationDelay: '4s' }} />
+        {/* Small accent orb - center right */}
+        <div className="absolute top-1/2 -right-10 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float-slow" style={{ animationDelay: '1s' }} />
+        {/* Small primary orb - bottom center */}
+        <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-primary/10 rounded-full blur-2xl animate-float-slow" style={{ animationDelay: '3s' }} />
+      </div>
+
       {/* Language Switcher */}
       <div className="fixed top-4 right-4 z-50">
         <LanguageSwitcher />
