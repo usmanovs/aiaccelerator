@@ -161,12 +161,12 @@ export const HeroSection = () => {
 
         <div className="mb-12">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-            <span className="block">{t.hero.title1}</span>
-            <span className="block">{t.hero.title2}</span>
-            <span className="block text-gradient">{t.hero.title3}</span>
+            <span className="block animate-fade-in" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>{t.hero.title1}</span>
+            <span className="block animate-fade-in" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>{t.hero.title2}</span>
+            <span className="block text-gradient animate-fade-in" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>{t.hero.title3}</span>
           </h1>
           
-          <div className="max-w-4xl mx-auto mb-12">
+          <div className="max-w-4xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: '400ms', animationFillMode: 'both' }}>
             <div className="border border-border/30 bg-background/20 px-8 py-6 rounded-xl backdrop-blur-sm">
               <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed">
                 {t.hero.description}
