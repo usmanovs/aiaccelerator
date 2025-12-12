@@ -4,6 +4,7 @@ import { PaymentButton } from "./PaymentButton";
 import { ExternalLink } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { CountdownTimer } from "./CountdownTimer";
 
 const projects = [
   {
@@ -85,6 +86,7 @@ export const HeroSection = () => {
           <p className="text-muted-foreground text-sm mb-6">
             {t.hero.dates}
           </p>
+          <CountdownTimer />
         </div>
 
         <div className="mb-12">
