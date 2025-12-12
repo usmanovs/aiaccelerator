@@ -1,3 +1,4 @@
+// Language context for i18n support
 import { createContext, useContext, ReactNode } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Language, Translations, getTranslation, languages } from "./index";
