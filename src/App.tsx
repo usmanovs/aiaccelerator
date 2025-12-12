@@ -18,21 +18,19 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <LanguageProvider>
-          <Routes>
-            {/* Redirect root to English */}
-            <Route path="/" element={<Navigate to="/en" replace />} />
-            
-            {/* Language-prefixed routes */}
-            <Route path="/:lang" element={<Index />} />
-            <Route path="/:lang/vibe-tools" element={<VibeTools />} />
-            <Route path="/:lang/payment-success" element={<PaymentSuccess />} />
-            <Route path="/:lang/payment-canceled" element={<PaymentCanceled />} />
-            
-            {/* Catch-all */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </LanguageProvider>
+        <Routes>
+          {/* Redirect root to English */}
+          <Route path="/" element={<Navigate to="/en" replace />} />
+          
+          {/* Language-prefixed routes */}
+          <Route path="/:lang" element={<LanguageProvider><Index /></LanguageProvider>} />
+          <Route path="/:lang/vibe-tools" element={<LanguageProvider><VibeTools /></LanguageProvider>} />
+          <Route path="/:lang/payment-success" element={<LanguageProvider><PaymentSuccess /></LanguageProvider>} />
+          <Route path="/:lang/payment-canceled" element={<LanguageProvider><PaymentCanceled /></LanguageProvider>} />
+          
+          {/* Catch-all */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
