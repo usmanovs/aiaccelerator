@@ -11,8 +11,8 @@ export const WhatsAppButton = () => {
       aria-label="Написать в WhatsApp"
     >
       {/* Pulse rings */}
-      <span className="absolute w-full h-full rounded-full bg-[#25D366] animate-ping opacity-30"></span>
-      <span className="absolute w-full h-full rounded-full bg-[#25D366] animate-pulse opacity-20"></span>
+      <span className="absolute w-full h-full rounded-full bg-[#25D366] animate-ping opacity-30 pointer-events-none"></span>
+      <span className="absolute w-full h-full rounded-full bg-[#25D366] animate-pulse opacity-20 pointer-events-none"></span>
       
       {/* WhatsApp Icon */}
       <svg
