@@ -112,7 +112,7 @@ export default {
 					'0%, 100%': { transform: 'translateY(0) translateX(0) scale(1)' },
 					'33%': { transform: 'translateY(-30px) translateX(-15px) scale(1.05)' },
 					'66%': { transform: 'translateY(-15px) translateX(20px) scale(0.95)' }
-				}
+				},
 				'glow-pulse': {
 					'0%, 100%': { boxShadow: '0 0 10px hsl(142 76% 58% / 0.2), 0 0 20px hsl(142 76% 58% / 0.1)' },
 					'50%': { boxShadow: '0 0 15px hsl(142 76% 58% / 0.3), 0 0 30px hsl(142 76% 58% / 0.2)' }
