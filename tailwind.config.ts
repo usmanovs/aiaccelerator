@@ -103,8 +103,8 @@ export default {
 					'100%': { backgroundPosition: '200% 0' }
 				},
 				'glow-pulse': {
-					'0%, 100%': { boxShadow: '0 0 20px hsl(142 76% 58% / 0.4), 0 0 40px hsl(142 76% 58% / 0.2)' },
-					'50%': { boxShadow: '0 0 30px hsl(142 76% 58% / 0.6), 0 0 60px hsl(142 76% 58% / 0.4)' }
+					'0%, 100%': { boxShadow: '0 0 10px hsl(142 76% 58% / 0.2), 0 0 20px hsl(142 76% 58% / 0.1)' },
+					'50%': { boxShadow: '0 0 15px hsl(142 76% 58% / 0.3), 0 0 30px hsl(142 76% 58% / 0.2)' }
 				}
 			},
 			animation: {
