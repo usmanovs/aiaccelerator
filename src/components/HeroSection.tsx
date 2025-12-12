@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CountdownTimer } from "./CountdownTimer";
+import { CountUpNumber } from "./CountUpNumber";
 
 const projects = [
   {
@@ -46,25 +47,44 @@ const projects = [
 
 export const HeroSection = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [statsVisible, setStatsVisible] = useState(false);
   const { t } = useLanguage();
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const projectsObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+          projectsObserver.disconnect();
         }
       },
       { threshold: 0.1 }
     );
 
+    const statsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStatsVisible(true);
+          statsObserver.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
     if (projectsRef.current) {
-      observer.observe(projectsRef.current);
+      projectsObserver.observe(projectsRef.current);
     }
 
-    return () => observer.disconnect();
+    if (statsRef.current) {
+      statsObserver.observe(statsRef.current);
+    }
+
+    return () => {
+      projectsObserver.disconnect();
+      statsObserver.disconnect();
+    };
   }, []);
 
   // Generate star particles with random positions
@@ -162,19 +182,25 @@ export const HeroSection = () => {
           </PaymentButton>
 
           {/* Stats Section */}
-          <div className="flex items-center justify-center gap-8 md:gap-16 mt-12">
+          <div ref={statsRef} className="flex items-center justify-center gap-8 md:gap-16 mt-12">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-gradient">
+                <CountUpNumber value={500} suffix="+" duration={2000} inView={statsVisible} />
+              </div>
               <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsApps}</div>
             </div>
             <div className="w-px h-12 bg-border/50" />
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient">10</div>
+              <div className="text-3xl md:text-4xl font-bold text-gradient">
+                <CountUpNumber value={10} duration={1500} inView={statsVisible} />
+              </div>
               <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsDays}</div>
             </div>
             <div className="w-px h-12 bg-border/50" />
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient">0</div>
+              <div className="text-3xl md:text-4xl font-bold text-gradient">
+                <CountUpNumber value={0} duration={500} inView={statsVisible} />
+              </div>
               <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsCode}</div>
             </div>
           </div>
