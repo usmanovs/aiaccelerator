@@ -185,21 +185,21 @@ export const HeroSection = () => {
           <div ref={statsRef} className="flex items-center justify-center gap-8 md:gap-16 mt-12">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-gradient">
-                <CountUpNumber value={500} suffix="+" duration={2000} inView={statsVisible} />
+                <CountUpNumber value={500} suffix="+" duration={2000} inView={statsVisible} delay={0} />
               </div>
               <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsApps}</div>
             </div>
             <div className="w-px h-12 bg-border/50" />
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-gradient">
-                <CountUpNumber value={10} duration={1500} inView={statsVisible} />
+                <CountUpNumber value={10} duration={1500} inView={statsVisible} delay={200} />
               </div>
               <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsDays}</div>
             </div>
             <div className="w-px h-12 bg-border/50" />
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-gradient">
-                <CountUpNumber value={0} duration={500} inView={statsVisible} />
+                <CountUpNumber value={0} duration={500} inView={statsVisible} delay={400} />
               </div>
               <div className="text-sm md:text-base text-muted-foreground">{t.hero.statsCode}</div>
             </div>

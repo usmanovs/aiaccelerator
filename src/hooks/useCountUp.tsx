@@ -4,12 +4,14 @@ interface UseCountUpOptions {
   end: number;
   duration?: number;
   start?: boolean;
+  delay?: number;
 }
 
-export const useCountUp = ({ end, duration = 2000, start = true }: UseCountUpOptions): number => {
+export const useCountUp = ({ end, duration = 2000, start = true, delay = 0 }: UseCountUpOptions): number => {
   const [count, setCount] = useState(0);
   const startTimeRef = useRef<number | null>(null);
   const animationFrameRef = useRef<number>();
+  const timeoutRef = useRef<number>();
 
   useEffect(() => {
     if (!start) {
@@ -39,15 +41,20 @@ export const useCountUp = ({ end, duration = 2000, start = true }: UseCountUpOpt
       }
     };
 
-    animationFrameRef.current = requestAnimationFrame(animate);
+    timeoutRef.current = window.setTimeout(() => {
+      animationFrameRef.current = requestAnimationFrame(animate);
+    }, delay);
 
     return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
       startTimeRef.current = null;
     };
-  }, [end, duration, start]);
+  }, [end, duration, start, delay]);
 
   return count;
 };
