@@ -67,21 +67,57 @@ export const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Generate star particles with random positions
+  const stars = Array.from({ length: 40 }, (_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    top: `${Math.random() * 100}%`,
+    delay: `${Math.random() * 5}s`,
+    size: Math.random() > 0.7 ? '3px' : '2px',
+  }));
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center overflow-hidden" dir={t.dir}>
-      {/* Floating Gradient Orbs */}
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center overflow-hidden bg-noise" dir={t.dir}>
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
+      
+      {/* Star Particles */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {stars.map((star) => (
+          <div
+            key={star.id}
+            className="star-particle"
+            style={{
+              left: star.left,
+              top: star.top,
+              width: star.size,
+              height: star.size,
+              animationDelay: star.delay,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Floating Gradient Orbs - Darker */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Large primary orb - top left */}
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-float-slow" />
         {/* Accent orb - top right */}
-        <div className="absolute -top-20 -right-20 w-72 h-72 bg-accent/15 rounded-full blur-3xl animate-float-slower" style={{ animationDelay: '2s' }} />
+        <div className="absolute -top-20 -right-20 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float-slower" style={{ animationDelay: '2s' }} />
         {/* Medium primary orb - bottom left */}
-        <div className="absolute bottom-20 -left-20 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-float-slower" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-20 -left-20 w-64 h-64 bg-primary/6 rounded-full blur-3xl animate-float-slower" style={{ animationDelay: '4s' }} />
         {/* Small accent orb - center right */}
-        <div className="absolute top-1/2 -right-10 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float-slow" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 -right-10 w-48 h-48 bg-accent/5 rounded-full blur-2xl animate-float-slow" style={{ animationDelay: '1s' }} />
         {/* Small primary orb - bottom center */}
-        <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-primary/10 rounded-full blur-2xl animate-float-slow" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-primary/5 rounded-full blur-2xl animate-float-slow" style={{ animationDelay: '3s' }} />
+        {/* Purple orb - mid left */}
+        <div className="absolute top-1/3 -left-16 w-56 h-56 bg-violet-500/4 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2.5s' }} />
+        {/* Indigo orb - bottom right */}
+        <div className="absolute bottom-32 right-1/4 w-44 h-44 bg-indigo-500/5 rounded-full blur-2xl animate-float-slower" style={{ animationDelay: '3.5s' }} />
       </div>
+      
+      {/* Radial Vignette */}
+      <div className="absolute inset-0 bg-vignette pointer-events-none" />
 
       {/* Language Switcher */}
       <div className="fixed top-4 right-4 z-50">
