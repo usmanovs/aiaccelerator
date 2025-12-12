@@ -16,7 +16,7 @@ export const en = {
     title1: "Transform Your Idea",
     title2: "Into a Real App",
     title3: "Using Only AI",
-    description: "Finally turn that app idea into reality within 10 days before someone else does.",
+    description: "No code. No experience needed. Ship your first app in 10 days — before someone else does.",
     cta: "Enroll Now",
     statsApps: "Apps Built",
     statsDays: "Day Average",
