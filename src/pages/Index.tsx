@@ -80,7 +80,7 @@ const Index = () => {
               <div className="border border-border rounded-lg p-6">
                 <h4 className="text-2xl font-bold text-gradient mb-6">{t.program.week1.title}</h4>
                 
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion type="single" collapsible defaultValue="lesson1" className="space-y-3">
                   <AccordionItem value="lesson1" className="bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 px-4">
                     <AccordionTrigger className="hover:no-underline py-4">
                       <div className="flex items-center gap-4">
