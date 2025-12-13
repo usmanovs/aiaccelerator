@@ -344,6 +344,7 @@ export const en = {
   pricing: {
     title: "Choose Your Path",
     subtitle: "Select the learning experience that fits your schedule",
+    limitedSpots: "Limited spots available",
     popular: "Most Popular",
     oneTime: "one-time payment",
     cta: "Enroll Now",
