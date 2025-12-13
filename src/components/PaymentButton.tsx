@@ -36,7 +36,8 @@ export const PaymentButton = ({ children, className, size, variant = "gradient",
 
       if (data?.url) {
         console.log("Redirecting to Stripe checkout:", data.url);
-        window.open(data.url, '_blank');
+        window.location.href = data.url;
+        return; // Don't reset loading - user will be redirected
       } else {
         throw new Error("No checkout URL received");
       }
@@ -47,7 +48,6 @@ export const PaymentButton = ({ children, className, size, variant = "gradient",
         description: "Произошла ошибка при обработке платежа.",
         variant: "destructive",
       });
-    } finally {
       setLoading(false);
     }
   };
