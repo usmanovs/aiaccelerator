@@ -6,9 +6,9 @@ import { Clock } from 'lucide-react';
 const BOOTCAMP_START = new Date("2025-12-22T00:00:00");
 
 const translations = {
-  en: { days: "d", hours: "h", minutes: "m", seconds: "s" },
-  ru: { days: "д", hours: "ч", minutes: "м", seconds: "с" },
-  fa: { days: "ر", hours: "س", minutes: "د", seconds: "ث" }
+  en: { startsIn: "Bootcamp starts in", days: "d", hours: "h", minutes: "m", seconds: "s" },
+  ru: { startsIn: "До начала буткемпа", days: "д", hours: "ч", minutes: "м", seconds: "с" },
+  fa: { startsIn: "تا شروع بوت‌کمپ", days: "ر", hours: "س", minutes: "د", seconds: "ث" }
 };
 
 const StickyHeader = () => {
@@ -56,6 +56,7 @@ const StickyHeader = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-center gap-3 sm:gap-6">
         <div className="flex items-center gap-2 text-accent">
           <Clock className="h-4 w-4 animate-pulse" />
+          <span className="hidden sm:inline text-xs text-muted-foreground">{labels.startsIn}:</span>
           <span className="text-xs sm:text-sm font-mono tabular-nums">
             <span className="font-bold">{String(timeLeft.days).padStart(2, '0')}</span>
             <span className="text-muted-foreground">{labels.days}</span>
