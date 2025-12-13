@@ -13,7 +13,7 @@ export const en = {
   hero: {
     badge: "AI APP BUILDING BOOTCAMP",
     dates: "December 22, 2025 - January 4, 2026",
-    schedule: "Classes: Monday, Wednesday, Friday",
+    schedule: "Classes: Mon, Wed, Fri at 7:00 PM NYC / 1:00 AM Berlin / 6:00 AM Bishkek",
     title1: "Transform Your Idea",
     title2: "Into a Real App",
     title3: "Using Only AI",
