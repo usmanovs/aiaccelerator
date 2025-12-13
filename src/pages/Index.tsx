@@ -9,6 +9,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import ScrollProgressIndicator from "@/components/ScrollProgressIndicator";
 import BackToTopButton from "@/components/BackToTopButton";
+import StickyHeader from "@/components/StickyHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
 import {
   Accordion,
@@ -22,6 +23,7 @@ const Index = () => {
   } = useLanguage();
   return <div className="min-h-screen" dir={t.dir}>
       <ScrollProgressIndicator />
+      <StickyHeader />
       <BackToTopButton />
       <WhatsAppButton />
       <HeroSection />
