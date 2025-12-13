@@ -1,4 +1,4 @@
-import { Check, Video, Users, AlertCircle } from "lucide-react";
+import { Check, Video, Users, AlertCircle, Quote, Shield, Clock, Users2 } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { PaymentButton } from "./PaymentButton";
 import { AnimatedSection } from "./AnimatedSection";
@@ -165,6 +165,38 @@ export const PricingSection = () => {
             );
           })}
         </div>
+
+        {/* Trust Section */}
+        <AnimatedSection delay={300}>
+          <div className="mt-16 max-w-3xl mx-auto">
+            {/* Testimonial Quote */}
+            <div className="relative bg-card/50 border border-border rounded-2xl p-8 mb-8">
+              <Quote className="absolute top-4 left-4 w-8 h-8 text-primary/20" />
+              <p className={`text-lg text-foreground/80 italic mb-4 ${isRTL ? "text-right pr-8" : "pl-8"}`}>
+                "{t.pricing?.trust?.quote || "This bootcamp changed my perspective on building products. I launched my first app in just 10 days!"}"
+              </p>
+              <p className={`text-sm font-semibold text-muted-foreground ${isRTL ? "text-right" : "text-left"}`}>
+                — {t.pricing?.trust?.author || "Alex K., Bootcamp Graduate"}
+              </p>
+            </div>
+
+            {/* Trust Badges */}
+            <div className={`flex flex-wrap justify-center gap-6 ${isRTL ? "flex-row-reverse" : ""}`}>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Users2 className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">{t.pricing?.trust?.students || "200+ students"}</span>
+              </div>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Shield className="w-5 h-5 text-accent" />
+                <span className="text-sm font-medium">{t.pricing?.trust?.satisfaction || "100% money-back guarantee"}</span>
+              </div>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Clock className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">{t.pricing?.trust?.support || "Lifetime access"}</span>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
