@@ -77,92 +77,98 @@ export const en = {
   // Program
   program: {
     title: "Training Program",
-    subtitle: "14 days • 4 tools • 1 complete app",
+    subtitle: "2 weeks • 6 lessons • 1 finished product",
     
     week1: {
-      title: "Week 1: Foundations and Building",
-      day1: {
-        title: "Day 1-2: Introduction and Planning",
+      title: "🔹 WEEK 1 — Entering AI and Creating First Projects",
+      lesson1: {
+        title: "Lesson 1 — AI Thinking and Escaping the \"Rat Race\"",
         items: [
-          "Introduction to the program and Lovable",
-          "How to generate app ideas",
-          "Choosing and documenting your idea",
-          "Project setup and first steps"
-        ]
+          "Why AI is an opportunity right now",
+          "Why regular jobs no longer provide stability",
+          "How ordinary people earn money with AI",
+          "Course and tools overview",
+          "The path: idea → product → money",
+          "Practice: your first simple AI project"
+        ],
+        homework: "Register for all tools and try your first AI project"
       },
-      day2: {
-        title: "Day 3-4: Starting Development",
+      lesson2: {
+        title: "Lesson 2 — Creating Websites and Games with AI (No Code)",
         items: [
-          "Creating the basic app structure",
-          "Setting up the user interface",
-          "Basics of working with components",
-          "First functionality prototype"
-        ]
+          "How AI creates websites and apps without programming",
+          "Creating a simple game or interactive website",
+          "Working with AI chat and content generation",
+          "The \"vibe coding\" principle — how to communicate with AI properly",
+          "Practice: everyone builds their mini-project"
+        ],
+        homework: "Refine the project and prepare a short demo"
       },
-      day3: {
-        title: "Day 5-6: Core Functionality",
+      lesson3: {
+        title: "Lesson 3 — Personal Website and Portfolio",
         items: [
-          "Building key app features",
-          "Supabase database integration",
-          "Working with user data",
-          "Testing core functionality"
-        ]
-      },
-      day4: {
-        title: "Day 7: Debugging and Bug Fixing",
-        items: [
-          "Problem diagnosis methods",
-          "4x4 bug solving framework",
-          "Performance optimization",
-          "Progress checkpoint"
-        ]
+          "Why you need a personal website in the AI era",
+          "What should be on a modern website",
+          "Multi-language support, chatbot, contact forms",
+          "\"Hire Me\" button and booking consultations",
+          "Practice: creating a personal website or portfolio"
+        ],
+        homework: "Complete the personal website and prepare it for presentation"
       }
     },
     
     week2: {
-      title: "Week 2: Design and Launch",
-      day1: {
-        title: "Day 8-9: Design and Polish",
+      title: "🔹 WEEK 2 — Money, Product, and Launch",
+      lesson4: {
+        title: "Lesson 4 — Ideas and Ways to Earn with AI",
         items: [
-          "Improving interface design",
-          "Working with component libraries",
-          "Responsive layouts",
-          "UX optimization"
-        ]
+          "Main earning models: subscription, business websites, AI services",
+          "What problems people are willing to pay for",
+          "Why \"status\" and urgent problems matter",
+          "How to find an idea that suits you",
+          "Practice: choosing an idea for your AI product"
+        ],
+        homework: "Describe the problem, target audience, and solution"
       },
-      day2: {
-        title: "Day 10-11: Integrations and Payments",
+      lesson5: {
+        title: "Lesson 5 — MVP, Payments, and First Users",
         items: [
-          "Setting up Stripe payments",
-          "External API integration",
-          "Email notification setup",
-          "Authentication system"
-        ]
+          "What is MVP and why launch quickly",
+          "Building the first working version of the product",
+          "Connecting payments (Stripe)",
+          "Email notifications and user database",
+          "Practice: building your AI app MVP"
+        ],
+        homework: "Launch MVP and prepare the product for presentation"
       },
-      day3: {
-        title: "Day 12-13: Deployment and SEO",
+      lesson6: {
+        title: "Lesson 6 — Marketing, Growth, and Demo Day",
         items: [
-          "App deployment",
-          "SEO configuration",
-          "Analytics setup",
-          "Final branding settings"
-        ]
-      },
-      day4: {
-        title: "Day 14: Launch and Next Steps",
-        items: [
-          "Final launch preparation",
-          "Product promotion strategies",
-          "App development plans",
-          "Launch celebration! 🎉"
+          "How to find your first customers",
+          "TikTok, Telegram, Instagram and other channels",
+          "How to improve the product based on feedback",
+          "Beginner mistakes and how to avoid them",
+          "Demo Day: each participant presents their project",
+          "Individual growth recommendations"
         ]
       }
+    },
+
+    whatYouGet: {
+      title: "🎯 What You'll Get After the Course",
+      items: [
+        "Understanding of AI in simple terms",
+        "Ability to create websites and AI apps without code",
+        "Real experience launching a product",
+        "A finished project and monetization plan",
+        "Confidence that you can repeat this again"
+      ]
     },
     
     included: {
       title: "What's Included",
       items: [
-        "14-day online bootcamp",
+        "2-week online bootcamp",
         "Weekly group calls",
         "Access to Deep Work OS system",
         "3 sessions per week, 1 hour each",
@@ -224,7 +230,7 @@ export const en = {
     
     cta: {
       title: "Ready to Start?",
-      subtitle: "Choose an idea and bring it to life in 14 days"
+      subtitle: "Choose an idea and bring it to life in 2 weeks"
     }
   },
 

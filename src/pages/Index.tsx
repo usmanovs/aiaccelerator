@@ -76,42 +76,50 @@ const Index = () => {
                 
                 <div className="grid gap-6">
                   <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">1</div>
+                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">1</div>
                     <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week1.day1.title}</h5>
+                      <h5 className="font-bold text-lg mb-2">{t.program.week1.lesson1.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week1.day1.items.map((item, i) => <li key={i}>• {item}</li>)}
+                        {t.program.week1.lesson1.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
+                      {t.program.week1.lesson1.homework && (
+                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                          <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
+                          <p className="text-sm text-muted-foreground mt-1">{t.program.week1.lesson1.homework}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">2</div>
+                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">2</div>
                     <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week1.day2.title}</h5>
+                      <h5 className="font-bold text-lg mb-2">{t.program.week1.lesson2.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week1.day2.items.map((item, i) => <li key={i}>• {item}</li>)}
+                        {t.program.week1.lesson2.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
+                      {t.program.week1.lesson2.homework && (
+                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                          <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
+                          <p className="text-sm text-muted-foreground mt-1">{t.program.week1.lesson2.homework}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">3</div>
+                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">3</div>
                     <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week1.day3.title}</h5>
+                      <h5 className="font-bold text-lg mb-2">{t.program.week1.lesson3.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week1.day3.items.map((item, i) => <li key={i}>• {item}</li>)}
+                        {t.program.week1.lesson3.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">4</div>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week1.day4.title}</h5>
-                      <ul className="text-muted-foreground space-y-1">
-                        {t.program.week1.day4.items.map((item, i) => <li key={i}>• {item}</li>)}
-                      </ul>
+                      {t.program.week1.lesson3.homework && (
+                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                          <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
+                          <p className="text-sm text-muted-foreground mt-1">{t.program.week1.lesson3.homework}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -125,44 +133,61 @@ const Index = () => {
                 
                 <div className="grid gap-6">
                   <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">5</div>
+                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">4</div>
                     <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week2.day1.title}</h5>
+                      <h5 className="font-bold text-lg mb-2">{t.program.week2.lesson4.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week2.day1.items.map((item, i) => <li key={i}>• {item}</li>)}
+                        {t.program.week2.lesson4.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
+                      {t.program.week2.lesson4.homework && (
+                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                          <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
+                          <p className="text-sm text-muted-foreground mt-1">{t.program.week2.lesson4.homework}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">6</div>
+                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">5</div>
                     <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week2.day2.title}</h5>
+                      <h5 className="font-bold text-lg mb-2">{t.program.week2.lesson5.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week2.day2.items.map((item, i) => <li key={i}>• {item}</li>)}
+                        {t.program.week2.lesson5.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
+                      {t.program.week2.lesson5.homework && (
+                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                          <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
+                          <p className="text-sm text-muted-foreground mt-1">{t.program.week2.lesson5.homework}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">7</div>
+                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">6</div>
                     <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week2.day3.title}</h5>
+                      <h5 className="font-bold text-lg mb-2">{t.program.week2.lesson6.title}</h5>
                       <ul className="text-muted-foreground space-y-1">
-                        {t.program.week2.day3.items.map((item, i) => <li key={i}>• {item}</li>)}
+                        {t.program.week2.lesson6.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                     </div>
                   </div>
+                </div>
+              </div>
+            </AnimatedSection>
 
-                  <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm">8</div>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week2.day4.title}</h5>
-                      <ul className="text-muted-foreground space-y-1">
-                        {t.program.week2.day4.items.map((item, i) => <li key={i}>• {item}</li>)}
-                      </ul>
+            {/* What You'll Get */}
+            <AnimatedSection delay={250}>
+              <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-lg p-8 border border-accent/20">
+                <h4 className="text-2xl font-bold mb-6 text-center">{t.program.whatYouGet.title}</h4>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {t.program.whatYouGet.items.map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 bg-card/30 p-3 rounded-lg">
+                      <div className="w-6 h-6 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-sm shrink-0">✓</div>
+                      <span className="text-foreground">{item}</span>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </AnimatedSection>
