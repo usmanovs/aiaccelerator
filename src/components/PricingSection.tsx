@@ -1,4 +1,4 @@
-import { Check, Video, Users } from "lucide-react";
+import { Check, Video, Users, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { PaymentButton } from "./PaymentButton";
 import { AnimatedSection } from "./AnimatedSection";
@@ -42,6 +42,12 @@ export const PricingSection = () => {
       <div className="max-w-5xl mx-auto">
         <AnimatedSection>
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 text-destructive border border-destructive/20 mb-6 animate-pulse">
+              <AlertCircle className="w-4 h-4" />
+              <span className="text-sm font-semibold">
+                {t.pricing?.limitedSpots || "Limited spots available"}
+              </span>
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
               {t.pricing?.title || "Choose Your Path"}
             </h2>
