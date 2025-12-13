@@ -8,6 +8,12 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ContactSection } from "@/components/ContactSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { useLanguage } from "@/i18n/LanguageContext";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 const Index = () => {
   const {
     t
@@ -74,55 +80,67 @@ const Index = () => {
               <div className="border border-border rounded-lg p-6">
                 <h4 className="text-2xl font-bold text-gradient mb-6">{t.program.week1.title}</h4>
                 
-                <div className="grid gap-6">
-                  <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">1</div>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week1.lesson1.title}</h5>
-                      <ul className="text-muted-foreground space-y-1">
+                <Accordion type="single" collapsible className="space-y-3">
+                  <AccordionItem value="lesson1" className="bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 px-4">
+                    <AccordionTrigger className="hover:no-underline py-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">1</div>
+                        <span className="font-bold text-lg text-left">{t.program.week1.lesson1.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4">
+                      <ul className="text-muted-foreground space-y-1 ml-12">
                         {t.program.week1.lesson1.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                       {t.program.week1.lesson1.homework && (
-                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                        <div className="mt-3 ml-12 p-3 bg-accent/10 rounded border border-accent/20">
                           <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
                           <p className="text-sm text-muted-foreground mt-1">{t.program.week1.lesson1.homework}</p>
                         </div>
                       )}
-                    </div>
-                  </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                  <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">2</div>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week1.lesson2.title}</h5>
-                      <ul className="text-muted-foreground space-y-1">
+                  <AccordionItem value="lesson2" className="bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 px-4">
+                    <AccordionTrigger className="hover:no-underline py-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">2</div>
+                        <span className="font-bold text-lg text-left">{t.program.week1.lesson2.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4">
+                      <ul className="text-muted-foreground space-y-1 ml-12">
                         {t.program.week1.lesson2.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                       {t.program.week1.lesson2.homework && (
-                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                        <div className="mt-3 ml-12 p-3 bg-accent/10 rounded border border-accent/20">
                           <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
                           <p className="text-sm text-muted-foreground mt-1">{t.program.week1.lesson2.homework}</p>
                         </div>
                       )}
-                    </div>
-                  </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                  <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">3</div>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week1.lesson3.title}</h5>
-                      <ul className="text-muted-foreground space-y-1">
+                  <AccordionItem value="lesson3" className="bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 px-4">
+                    <AccordionTrigger className="hover:no-underline py-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">3</div>
+                        <span className="font-bold text-lg text-left">{t.program.week1.lesson3.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4">
+                      <ul className="text-muted-foreground space-y-1 ml-12">
                         {t.program.week1.lesson3.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                       {t.program.week1.lesson3.homework && (
-                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                        <div className="mt-3 ml-12 p-3 bg-accent/10 rounded border border-accent/20">
                           <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
                           <p className="text-sm text-muted-foreground mt-1">{t.program.week1.lesson3.homework}</p>
                         </div>
                       )}
-                    </div>
-                  </div>
-                </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
             </AnimatedSection>
 
@@ -131,49 +149,61 @@ const Index = () => {
               <div className="border border-border rounded-lg p-6">
                 <h4 className="text-2xl font-bold text-gradient mb-6">{t.program.week2.title}</h4>
                 
-                <div className="grid gap-6">
-                  <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">4</div>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week2.lesson4.title}</h5>
-                      <ul className="text-muted-foreground space-y-1">
+                <Accordion type="single" collapsible className="space-y-3">
+                  <AccordionItem value="lesson4" className="bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 px-4">
+                    <AccordionTrigger className="hover:no-underline py-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">4</div>
+                        <span className="font-bold text-lg text-left">{t.program.week2.lesson4.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4">
+                      <ul className="text-muted-foreground space-y-1 ml-12">
                         {t.program.week2.lesson4.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                       {t.program.week2.lesson4.homework && (
-                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                        <div className="mt-3 ml-12 p-3 bg-accent/10 rounded border border-accent/20">
                           <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
                           <p className="text-sm text-muted-foreground mt-1">{t.program.week2.lesson4.homework}</p>
                         </div>
                       )}
-                    </div>
-                  </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                  <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">5</div>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week2.lesson5.title}</h5>
-                      <ul className="text-muted-foreground space-y-1">
+                  <AccordionItem value="lesson5" className="bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 px-4">
+                    <AccordionTrigger className="hover:no-underline py-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">5</div>
+                        <span className="font-bold text-lg text-left">{t.program.week2.lesson5.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4">
+                      <ul className="text-muted-foreground space-y-1 ml-12">
                         {t.program.week2.lesson5.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
                       {t.program.week2.lesson5.homework && (
-                        <div className="mt-3 p-3 bg-accent/10 rounded border border-accent/20">
+                        <div className="mt-3 ml-12 p-3 bg-accent/10 rounded border border-accent/20">
                           <span className="text-sm font-medium text-accent">📝 {t.lang === 'ru' ? 'Домашнее задание' : t.lang === 'fa' ? 'تکلیف' : 'Homework'}:</span>
                           <p className="text-sm text-muted-foreground mt-1">{t.program.week2.lesson5.homework}</p>
                         </div>
                       )}
-                    </div>
-                  </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                  <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-border/50">
-                    <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">6</div>
-                    <div>
-                      <h5 className="font-bold text-lg mb-2">{t.program.week2.lesson6.title}</h5>
-                      <ul className="text-muted-foreground space-y-1">
+                  <AccordionItem value="lesson6" className="bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 px-4">
+                    <AccordionTrigger className="hover:no-underline py-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-bold text-sm shrink-0">6</div>
+                        <span className="font-bold text-lg text-left">{t.program.week2.lesson6.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4">
+                      <ul className="text-muted-foreground space-y-1 ml-12">
                         {t.program.week2.lesson6.items.map((item, i) => <li key={i}>• {item}</li>)}
                       </ul>
-                    </div>
-                  </div>
-                </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
             </AnimatedSection>
 
