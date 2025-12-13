@@ -347,6 +347,9 @@ export const en = {
     popular: "Most Popular",
     oneTime: "one-time payment",
     cta: "Enroll Now",
+    totalValue: "Total Value",
+    youPay: "You Pay",
+    youSave: "You Save",
     tiers: {
       recordings: {
         name: "Recordings Only",
@@ -357,6 +360,10 @@ export const en = {
           "Private Discord community",
           "Access to Deep Work OS system",
           "Certificate of completion"
+        ],
+        valueItems: [
+          { name: "Full Access to All Recorded Lessons", value: 300 },
+          { name: "Community Access", value: 97 }
         ]
       },
       live: {
@@ -369,6 +376,11 @@ export const en = {
           "Personal instructor support",
           "Demo Day presentation",
           "Priority Discord support"
+        ],
+        valueItems: [
+          { name: "6 Live Sessions with Seyitbek", value: 494 },
+          { name: "Full Access to All Recorded Lessons", value: 300 },
+          { name: "Community Access", value: 300 }
         ]
       }
     }
