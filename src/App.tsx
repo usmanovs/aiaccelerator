@@ -15,23 +15,25 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          {/* Redirect root to Russian */}
-          <Route path="/" element={<Navigate to="/ru" replace />} />
-          
-          {/* Language-prefixed routes */}
-          <Route path="/:lang" element={<LanguageProvider><Index /></LanguageProvider>} />
-          <Route path="/:lang/vibe-tools" element={<LanguageProvider><VibeTools /></LanguageProvider>} />
-          <Route path="/:lang/payment-success" element={<LanguageProvider><PaymentSuccess /></LanguageProvider>} />
-          <Route path="/:lang/payment-canceled" element={<LanguageProvider><PaymentCanceled /></LanguageProvider>} />
-          
-          {/* Catch-all */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <LanguageProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            {/* Redirect root to Russian */}
+            <Route path="/" element={<Navigate to="/ru" replace />} />
+            
+            {/* Language-prefixed routes */}
+            <Route path="/:lang" element={<Index />} />
+            <Route path="/:lang/vibe-tools" element={<VibeTools />} />
+            <Route path="/:lang/payment-success" element={<PaymentSuccess />} />
+            <Route path="/:lang/payment-canceled" element={<PaymentCanceled />} />
+            
+            {/* Catch-all */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
