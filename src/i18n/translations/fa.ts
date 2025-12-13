@@ -347,6 +347,9 @@ export const fa = {
     popular: "محبوب‌ترین",
     oneTime: "پرداخت یکباره",
     cta: "ثبت‌نام کنید",
+    totalValue: "ارزش کل",
+    youPay: "شما پرداخت می‌کنید",
+    youSave: "صرفه‌جویی شما",
     tiers: {
       recordings: {
         name: "فقط ضبط‌ها",
@@ -357,6 +360,10 @@ export const fa = {
           "جامعه خصوصی Discord",
           "دسترسی به سیستم Deep Work OS",
           "گواهینامه پایان دوره"
+        ],
+        valueItems: [
+          { name: "دسترسی کامل به تمام درس‌های ضبط شده", value: 300 },
+          { name: "دسترسی به جامعه", value: 97 }
         ]
       },
       live: {
@@ -369,6 +376,11 @@ export const fa = {
           "پشتیبانی شخصی مربی",
           "ارائه در Demo Day",
           "پشتیبانی اولویت‌دار Discord"
+        ],
+        valueItems: [
+          { name: "۶ جلسه زنده با سیت‌بک", value: 494 },
+          { name: "دسترسی کامل به تمام درس‌های ضبط شده", value: 300 },
+          { name: "دسترسی به جامعه", value: 300 }
         ]
       }
     }
