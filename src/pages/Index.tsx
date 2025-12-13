@@ -34,9 +34,11 @@ const Index = () => {
       
 
       <VideoTestimonial />
-      <TestimonialsSection />
+      <div id="testimonials">
+        <TestimonialsSection />
+      </div>
 
-      <section className="py-20 px-6">
+      <section id="instructor" className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -57,7 +59,9 @@ const Index = () => {
         </div>
       </section>
 
-      <PricingSection />
+      <div id="pricing">
+        <PricingSection />
+      </div>
 
       <section className="py-20 px-6 bg-gradient-to-r from-primary/10 to-secondary/10">
         <AnimatedSection className="max-w-4xl mx-auto text-center">
@@ -76,7 +80,7 @@ const Index = () => {
         </AnimatedSection>
       </section>
 
-      <section className="py-20 px-6">
+      <section id="program" className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -363,7 +367,9 @@ const Index = () => {
       </section>
 
 
-      <ContactSection />
+      <div id="contact">
+        <ContactSection />
+      </div>
 
       <FAQ />
     </div>;
