@@ -351,6 +351,13 @@ export const en = {
     totalValue: "Total Value",
     youPay: "You Pay",
     youSave: "You Save",
+    trust: {
+      quote: "This bootcamp changed my perspective on building products. I launched my first app in just 10 days!",
+      author: "Alex K., Bootcamp Graduate",
+      students: "200+ students",
+      satisfaction: "100% money-back guarantee",
+      support: "Lifetime access"
+    },
     tiers: {
       recordings: {
         name: "Recordings Only",
