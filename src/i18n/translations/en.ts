@@ -59,6 +59,17 @@ export const en = {
     altText: "Student testimonial"
   },
 
+  // Video Testimonial
+  videoTestimonial: {
+    badge: "Success Story",
+    title: "From Truck Driver to App Creator",
+    subtitle: "See what our graduates are building",
+    role: "Bootcamp Graduate",
+    description: "Built RoadTalk English — a language learning app for truck drivers. Zero coding experience.",
+    badge2: "Zero coding → Full web app",
+    viewApp: "View her app"
+  },
+
   // Instructor
   instructor: {
     title: "Your Instructor",

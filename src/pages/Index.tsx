@@ -7,6 +7,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ContactSection } from "@/components/ContactSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { VideoTestimonial } from "@/components/VideoTestimonial";
 import ScrollProgressIndicator from "@/components/ScrollProgressIndicator";
 import BackToTopButton from "@/components/BackToTopButton";
 import StickyHeader from "@/components/StickyHeader";
@@ -30,6 +31,7 @@ const Index = () => {
       
       
 
+      <VideoTestimonial />
       <TestimonialsSection />
 
       <section className="py-20 px-6">
