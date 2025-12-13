@@ -6,6 +6,20 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// Pricing tiers
+const PRICING = {
+  live: {
+    amount: 30000, // $300 in cents
+    name: "AI App Bootcamp - Live Classes",
+    description: "14-day online bootcamp with live sessions with Seyitbek"
+  },
+  recordings: {
+    amount: 14900, // $149 in cents
+    name: "AI App Bootcamp - Recordings Only",
+    description: "Full access to all recorded lessons and materials"
+  }
+};
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -13,15 +27,18 @@ serve(async (req) => {
   }
 
   try {
-    console.log("Creating payment session for AI Bootcamp enrollment");
-
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16",
     });
 
-    // Get customer email from request if provided
-    const { email } = await req.json().catch(() => ({ email: "guest@example.com" }));
-    console.log("Customer email:", email);
+    // Get customer email and tier from request
+    const { email, tier } = await req.json().catch(() => ({ email: "guest@example.com", tier: "live" }));
+    
+    // Default to live tier if invalid tier provided
+    const selectedTier = tier === "recordings" ? "recordings" : "live";
+    const pricing = PRICING[selectedTier];
+    
+    console.log("Creating payment session for tier:", selectedTier, "Amount:", pricing.amount);
 
     // Check if customer already exists
     const customers = await stripe.customers.list({ email, limit: 1 });
@@ -31,7 +48,7 @@ serve(async (req) => {
       console.log("Found existing customer:", customerId);
     }
 
-    // Create checkout session for $300 AI Bootcamp enrollment
+    // Create checkout session
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_email: customerId ? undefined : email,
@@ -40,10 +57,10 @@ serve(async (req) => {
           price_data: {
             currency: "usd",
             product_data: { 
-              name: "ИИ Буткемп по Приложениям",
-              description: "14-дневный онлайн буткемп по созданию приложений с помощью ИИ"
+              name: pricing.name,
+              description: pricing.description
             },
-            unit_amount: 30000, // $300 in cents
+            unit_amount: pricing.amount,
           },
           quantity: 1,
         },

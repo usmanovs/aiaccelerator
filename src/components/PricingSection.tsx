@@ -101,6 +101,7 @@ export const PricingSection = () => {
                       : "bg-muted text-foreground hover:bg-muted/80"
                   }`}
                   variant={tier.popular ? "default" : "secondary"}
+                  tier={tier.featuresKey}
                 >
                   {t.pricing?.cta || "Enroll Now"}
                 </PaymentButton>

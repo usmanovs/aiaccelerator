@@ -8,19 +8,20 @@ interface PaymentButtonProps {
   className?: string;
   size?: "default" | "sm" | "lg" | "icon";
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "gradient";
+  tier?: "live" | "recordings";
 }
 
-export const PaymentButton = ({ children, className, size, variant = "gradient" }: PaymentButtonProps) => {
+export const PaymentButton = ({ children, className, size, variant = "gradient", tier = "live" }: PaymentButtonProps) => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
   const handlePayment = async () => {
     try {
       setLoading(true);
-      console.log("Starting payment process...");
+      console.log("Starting payment process for tier:", tier);
 
       const { data, error } = await supabase.functions.invoke('create-payment', {
-        body: { email: "guest@example.com" }
+        body: { email: "guest@example.com", tier }
       });
 
       if (error) {
