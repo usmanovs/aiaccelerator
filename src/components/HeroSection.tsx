@@ -156,7 +156,7 @@ export const HeroSection = () => {
           <p className="text-muted-foreground text-sm mb-2">
             {t.hero.dates}
           </p>
-          <p className="inline-block text-muted-foreground text-sm mb-6 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full backdrop-blur-sm">
+          <p className="inline-block text-muted-foreground text-sm mb-6 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full backdrop-blur-sm transition-all duration-300 hover:bg-accent/20 hover:border-accent/40 hover:scale-105 cursor-default">
             {t.hero.schedule}
           </p>
           <CountdownTimer />
