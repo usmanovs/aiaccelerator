@@ -366,7 +366,6 @@ export const en = {
           "Full access to all recorded lessons",
           "Lifetime access to materials",
           "Private Discord community",
-          "Access to Deep Work OS system",
           "Certificate of completion"
         ],
         valueItems: [
