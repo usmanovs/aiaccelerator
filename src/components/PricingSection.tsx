@@ -124,7 +124,7 @@ export const PricingSection = () => {
                         </div>
                         <div className={`flex justify-between items-center ${isRTL ? "flex-row-reverse" : ""}`}>
                           <span className="text-sm text-muted-foreground">{t.pricing?.youSave || "You Save"}</span>
-                          <span className="text-sm font-bold text-accent bg-accent/10 px-2 py-0.5 rounded">
+                          <span className="text-sm font-bold text-accent bg-accent/20 px-3 py-1 rounded-full animate-pulse shadow-lg shadow-accent/30">
                             {savingsPercent}%
                           </span>
                         </div>
