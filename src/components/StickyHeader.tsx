@@ -51,6 +51,7 @@ const navItems = [
 
 const StickyHeader = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('');
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const { t, lang } = useLanguage();
   const labels = translations[lang as keyof typeof translations] || translations.en;
@@ -62,6 +63,32 @@ const StickyHeader = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Track active section with Intersection Observer
+  useEffect(() => {
+    const sectionIds = navItems.map(item => item.id);
+    const observers: IntersectionObserver[] = [];
+
+    sectionIds.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setActiveSection(id);
+              }
+            });
+          },
+          { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
+        );
+        observer.observe(element);
+        observers.push(observer);
+      }
+    });
+
+    return () => observers.forEach(obs => obs.disconnect());
   }, []);
 
   useEffect(() => {
@@ -105,7 +132,11 @@ const StickyHeader = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="px-2 lg:px-3 py-1.5 text-xs lg:text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/50"
+              className={`px-2 lg:px-3 py-1.5 text-xs lg:text-sm transition-colors rounded-md ${
+                activeSection === item.id
+                  ? 'text-primary bg-primary/10 font-medium'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+              }`}
             >
               {labels.nav[item.key]}
             </button>
