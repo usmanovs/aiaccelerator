@@ -153,8 +153,11 @@ export const HeroSection = () => {
               {t.hero.badge}
             </h2>
           </div>
-          <p className="text-muted-foreground text-sm mb-6">
+          <p className="text-muted-foreground text-sm mb-2">
             {t.hero.dates}
+          </p>
+          <p className="text-muted-foreground text-sm mb-6">
+            {t.hero.schedule}
           </p>
           <CountdownTimer />
         </div>
