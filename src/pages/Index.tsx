@@ -13,6 +13,7 @@ import BackToTopButton from "@/components/BackToTopButton";
 import StickyHeader from "@/components/StickyHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { GuaranteeBadge } from "@/components/GuaranteeBadge";
+import { PricingSection } from "@/components/PricingSection";
 import {
   Accordion,
   AccordionContent,
@@ -55,6 +56,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <PricingSection />
 
       <section className="py-20 px-6 bg-gradient-to-r from-primary/10 to-secondary/10">
         <AnimatedSection className="max-w-4xl mx-auto text-center">
