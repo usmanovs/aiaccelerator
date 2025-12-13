@@ -6,6 +6,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CountdownTimer } from "./CountdownTimer";
 import { CountUpNumber } from "./CountUpNumber";
+import { GuaranteeBadge } from "./GuaranteeBadge";
 
 const projects = [
   {
@@ -183,6 +184,11 @@ export const HeroSection = () => {
           >
             {t.hero.cta}
           </PaymentButton>
+
+          {/* Guarantee Badge */}
+          <div className="mt-6">
+            <GuaranteeBadge />
+          </div>
 
           {/* Stats Section */}
           <div ref={statsRef} className="flex items-center justify-center gap-8 md:gap-16 mt-12">

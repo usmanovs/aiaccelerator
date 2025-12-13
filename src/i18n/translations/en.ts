@@ -332,5 +332,11 @@ export const en = {
         description: "Building and launching a working app that solves real problems."
       }
     ]
+  },
+
+  // Guarantee
+  guarantee: {
+    title: "Build Your First App or Money Back",
+    description: "We're so confident in our program that if you don't build a working app by the end of the bootcamp, we'll refund your payment. No questions asked."
   }
 };

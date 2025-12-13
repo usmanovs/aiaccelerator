@@ -12,6 +12,7 @@ import ScrollProgressIndicator from "@/components/ScrollProgressIndicator";
 import BackToTopButton from "@/components/BackToTopButton";
 import StickyHeader from "@/components/StickyHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { GuaranteeBadge } from "@/components/GuaranteeBadge";
 import {
   Accordion,
   AccordionContent,
@@ -63,6 +64,9 @@ const Index = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             {t.readyToStart.subtitle}
           </p>
+          <div className="mb-6">
+            <GuaranteeBadge />
+          </div>
           <PaymentButton className="px-12 py-4 text-xl font-bold hover:scale-105 transition-transform duration-300 shadow-lg">
             {t.readyToStart.cta}
           </PaymentButton>
