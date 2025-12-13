@@ -338,5 +338,39 @@ export const en = {
   guarantee: {
     title: "Build Your First App or Money Back",
     description: "We're so confident in our program that if you don't build a working app by the end of the bootcamp, we'll refund your payment. No questions asked."
+  },
+
+  // Pricing
+  pricing: {
+    title: "Choose Your Path",
+    subtitle: "Select the learning experience that fits your schedule",
+    popular: "Most Popular",
+    oneTime: "one-time payment",
+    cta: "Enroll Now",
+    tiers: {
+      recordings: {
+        name: "Recordings Only",
+        description: "Learn at your own pace with full access to all course materials",
+        features: [
+          "Full access to all recorded lessons",
+          "Lifetime access to materials",
+          "Private Discord community",
+          "Access to Deep Work OS system",
+          "Certificate of completion"
+        ]
+      },
+      live: {
+        name: "Live Classes",
+        description: "Join live sessions with Seyitbek and get real-time feedback",
+        features: [
+          "Everything in Recordings",
+          "6 live sessions with Seyitbek",
+          "Real-time Q&A and feedback",
+          "Personal instructor support",
+          "Demo Day presentation",
+          "Priority Discord support"
+        ]
+      }
+    }
   }
 };
