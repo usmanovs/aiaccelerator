@@ -32,9 +32,38 @@ serve(async (req) => {
     });
 
     // Get customer email and tier from request
-    const { email, tier } = await req.json().catch(() => ({ email: "guest@example.com", tier: "live" }));
+    let requestData;
+    try {
+      requestData = await req.json();
+    } catch {
+      console.error("Invalid JSON in request body");
+      return new Response(JSON.stringify({ error: "Invalid request body" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
+
+    const { email, tier } = requestData;
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || typeof email !== 'string' || !emailRegex.test(email) || email.length > 255) {
+      console.error("Invalid email provided:", email?.substring?.(0, 50));
+      return new Response(JSON.stringify({ error: "Valid email is required" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
+
+    // Validate tier
+    if (tier && !['live', 'recordings'].includes(tier)) {
+      console.error("Invalid tier provided:", tier);
+      return new Response(JSON.stringify({ error: "Invalid tier selection" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
     
-    // Default to live tier if invalid tier provided
     const selectedTier = tier === "recordings" ? "recordings" : "live";
     const pricing = PRICING[selectedTier];
     
@@ -78,7 +107,8 @@ serve(async (req) => {
     });
   } catch (error) {
     console.error("Payment creation error:", error);
-    return new Response(JSON.stringify({ error: error.message }), {
+    // Return generic error message to avoid leaking internal details
+    return new Response(JSON.stringify({ error: "Failed to create payment session. Please try again." }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
     });
