@@ -22,10 +22,7 @@ const StickyHeader = () => {
       }`}
       dir={t.dir}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <span className="font-bold text-base sm:text-lg text-foreground">
-          AI Bootcamp
-        </span>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-center gap-4">
         <PaymentButton size="sm" className="text-sm">
           {t.hero.cta}
         </PaymentButton>
