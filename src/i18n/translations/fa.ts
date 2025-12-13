@@ -59,6 +59,17 @@ export const fa = {
     altText: "نظر دانشجو"
   },
 
+  // Video Testimonial
+  videoTestimonial: {
+    badge: "داستان موفقیت",
+    title: "از راننده کامیون به سازنده اپلیکیشن",
+    subtitle: "ببینید فارغ‌التحصیلان ما چه می‌سازند",
+    role: "فارغ‌التحصیل بوت‌کمپ",
+    description: "RoadTalk English ساخت — اپلیکیشن یادگیری زبان برای رانندگان کامیون. بدون تجربه کدنویسی.",
+    badge2: "صفر کدنویسی → اپلیکیشن کامل",
+    viewApp: "اپلیکیشنش را ببینید"
+  },
+
   // Instructor
   instructor: {
     title: "مربی شما",
