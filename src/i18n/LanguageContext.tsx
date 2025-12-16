@@ -1,6 +1,6 @@
 // Language context for i18n support
 import { createContext, useContext, ReactNode } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Language, Translations, getTranslation, languages } from "./index";
 
 interface LanguageContextType {
@@ -13,12 +13,16 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const { lang } = useParams<{ lang: string }>();
+  const location = useLocation();
   const navigate = useNavigate();
   
+  // Extract language from URL path (e.g., "/ru" → "ru")
+  const pathSegments = location.pathname.split('/').filter(Boolean);
+  const pathLang = pathSegments[0];
+  
   // Default to English, validate language code
-  const currentLang: Language = (lang && ["en", "ru", "fa"].includes(lang)) 
-    ? (lang as Language) 
+  const currentLang: Language = (pathLang && ["en", "ru", "fa"].includes(pathLang)) 
+    ? (pathLang as Language) 
     : "en";
   
   const t = getTranslation(currentLang);
