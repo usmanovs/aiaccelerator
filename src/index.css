@@ -162,15 +162,115 @@
   /* Animated grid pattern */
   .bg-grid-pattern {
     background-image: 
-      linear-gradient(to right, hsl(220 70% 50% / 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(220 70% 50% / 0.03) 1px, transparent 1px);
+      linear-gradient(to right, hsl(180 100% 50% / 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(180 100% 50% / 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     animation: grid-move 20s linear infinite;
+  }
+
+  .bg-grid-pattern-animated {
+    background-image: 
+      linear-gradient(to right, hsl(180 100% 50% / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(180 100% 50% / 0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: grid-pulse 4s ease-in-out infinite, grid-move 30s linear infinite;
   }
 
   @keyframes grid-move {
     0% { background-position: 0 0; }
     100% { background-position: 60px 60px; }
+  }
+
+  @keyframes grid-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Floating particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .particle-glow {
+    background: radial-gradient(circle, hsl(180 100% 70% / 0.6) 0%, transparent 70%);
+    animation: float-particle 8s ease-in-out infinite;
+  }
+
+  .particle-dot {
+    background: hsl(180 100% 70%);
+    box-shadow: 0 0 10px hsl(180 100% 70% / 0.5);
+    animation: twinkle-bright 3s ease-in-out infinite;
+  }
+
+  @keyframes float-particle {
+    0%, 100% { 
+      transform: translateY(0) translateX(0) scale(1);
+      opacity: 0.3;
+    }
+    25% { 
+      transform: translateY(-20px) translateX(10px) scale(1.1);
+      opacity: 0.6;
+    }
+    50% { 
+      transform: translateY(-10px) translateX(-5px) scale(0.9);
+      opacity: 0.4;
+    }
+    75% { 
+      transform: translateY(-30px) translateX(15px) scale(1.05);
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes twinkle-bright {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+  }
+
+  /* Connection lines */
+  .connection-line {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(180 100% 70% / 0.3), transparent);
+    animation: line-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes line-pulse {
+    0%, 100% { opacity: 0; transform: scaleX(0); }
+    50% { opacity: 1; transform: scaleX(1); }
+  }
+
+  /* Scanning line effect */
+  .scan-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(180 100% 70% / 0.5), transparent);
+    animation: scan 6s ease-in-out infinite;
+  }
+
+  @keyframes scan {
+    0% { top: 0; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+  }
+
+  /* Orb glow effect */
+  .orb-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: orb-float 10s ease-in-out infinite;
+  }
+
+  @keyframes orb-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(30px, -20px) scale(1.1); }
+    50% { transform: translate(-20px, 30px) scale(0.9); }
+    75% { transform: translate(20px, 20px) scale(1.05); }
   }
 
   /* Noise texture overlay */
