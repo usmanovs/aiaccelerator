@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState, useMemo } from "react";
-import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Calendar, Target, User, Rocket, ChevronDown } from "lucide-react";
+import { Calendar, Target, User, Rocket, Mouse } from "lucide-react";
 import { Button } from "./ui/button";
+import { Header } from "./Header";
 
 export const HeroSection = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -21,32 +21,12 @@ export const HeroSection = () => {
     }
   };
 
-  // Generate floating particles with memoization - reduced count for subtlety
-  const particles = useMemo(() => Array.from({ length: 15 }, (_, i) => ({
+  // Generate subtle grid dots
+  const gridDots = useMemo(() => Array.from({ length: 200 }, (_, i) => ({
     id: i,
-    left: `${Math.random() * 100}%`,
-    top: `${Math.random() * 100}%`,
-    size: Math.random() * 3 + 1,
-    delay: `${Math.random() * 5}s`,
-    duration: `${Math.random() * 4 + 6}s`,
-    type: Math.random() > 0.8 ? 'glow' : 'dot',
+    left: `${(i % 20) * 5 + 2.5}%`,
+    top: `${Math.floor(i / 20) * 10 + 5}%`,
   })), []);
-
-  // Generate grid intersection dots - reduced for cleaner look
-  const gridDots = useMemo(() => Array.from({ length: 40 }, (_, i) => ({
-    id: i,
-    left: `${(i % 8) * 13 + 6}%`,
-    top: `${Math.floor(i / 8) * 18 + 10}%`,
-    delay: `${Math.random() * 4}s`,
-  })), []);
-
-  // Generate orb glows - more subtle
-  const orbs = useMemo(() => [
-    { left: '5%', top: '15%', size: 250, color: 'hsl(180 100% 50% / 0.04)', delay: '0s' },
-    { left: '85%', top: '25%', size: 200, color: 'hsl(280 80% 60% / 0.03)', delay: '2s' },
-    { left: '15%', top: '75%', size: 220, color: 'hsl(280 80% 60% / 0.03)', delay: '4s' },
-    { left: '75%', top: '85%', size: 180, color: 'hsl(180 100% 50% / 0.04)', delay: '1s' },
-  ], []);
 
   const infoCards = [
     {
@@ -74,82 +54,48 @@ export const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-12 text-center overflow-hidden"
       dir={t.dir}
     >
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern-animated pointer-events-none" />
+      {/* Header */}
+      <Header />
 
-      {/* Scanning Line Effect */}
-      <div className="scan-line pointer-events-none" />
-
-      {/* Orb Glows */}
-      {orbs.map((orb, i) => (
-        <div
-          key={i}
-          className="orb-glow pointer-events-none"
-          style={{
-            left: orb.left,
-            top: orb.top,
-            width: orb.size,
-            height: orb.size,
-            background: orb.color,
-            animationDelay: orb.delay,
-          }}
-        />
-      ))}
-
-      {/* Grid Intersection Dots */}
+      {/* Subtle Grid Dots */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {gridDots.map((dot) => (
           <div
             key={dot.id}
-            className="particle particle-dot"
-            style={{
-              left: dot.left,
-              top: dot.top,
-              width: 3,
-              height: 3,
-              animationDelay: dot.delay,
-            }}
+            className="absolute w-[2px] h-[2px] rounded-full bg-accent/10"
+            style={{ left: dot.left, top: dot.top }}
           />
         ))}
       </div>
 
-      {/* Floating Particles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {particles.map((particle) => (
-          <div
-            key={particle.id}
-            className={`particle ${particle.type === 'glow' ? 'particle-glow' : 'particle-dot'}`}
-            style={{
-              left: particle.left,
-              top: particle.top,
-              width: particle.type === 'glow' ? particle.size * 8 : particle.size,
-              height: particle.type === 'glow' ? particle.size * 8 : particle.size,
-              animationDelay: particle.delay,
-              animationDuration: particle.duration,
-            }}
-          />
-        ))}
+      {/* Subtle Grid Lines */}
+      <div className="absolute inset-0 pointer-events-none opacity-30">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, hsl(180 100% 50% / 0.03) 1px, transparent 1px),
+              linear-gradient(to bottom, hsl(180 100% 50% / 0.03) 1px, transparent 1px)
+            `,
+            backgroundSize: '80px 80px',
+          }}
+        />
       </div>
 
       {/* Radial Vignette */}
       <div className="absolute inset-0 bg-vignette pointer-events-none" />
 
-      {/* Language Switcher */}
-      <div className="fixed top-4 right-4 z-50">
-        <LanguageSwitcher />
-      </div>
-
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Badge */}
         <div
-          className={`mb-12 transition-all duration-700 ${
+          className={`mb-10 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="inline-flex items-center gap-2 border border-accent/40 bg-accent/10 px-6 py-3 rounded-full backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 border border-accent/50 bg-transparent px-6 py-2.5 rounded-full">
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-sm font-medium text-accent tracking-wide">
               {t.hero.badge}
@@ -158,24 +104,24 @@ export const HeroSection = () => {
         </div>
 
         {/* Main Headline */}
-        <div className="mb-10">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
+        <div className="mb-8">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight">
             <span
-              className={`block text-foreground transition-all duration-700 delay-100 ${
+              className={`block text-foreground italic transition-all duration-700 delay-100 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
               {t.hero.title1}
             </span>
             <span
-              className={`block text-gradient-cyan transition-all duration-700 delay-200 ${
+              className={`block text-gradient-cyan italic transition-all duration-700 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
               {t.hero.title2}
             </span>
             <span
-              className={`block text-gradient-purple transition-all duration-700 delay-300 ${
+              className={`block text-gradient-purple italic transition-all duration-700 delay-300 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
@@ -194,7 +140,7 @@ export const HeroSection = () => {
 
         {/* Subtitle */}
         <div
-          className={`mb-16 max-w-2xl mx-auto transition-all duration-700 delay-500 ${
+          className={`mb-14 max-w-2xl mx-auto transition-all duration-700 delay-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -203,24 +149,24 @@ export const HeroSection = () => {
             <span className="text-accent font-semibold">{t.hero.descriptionHighlight}</span>
             {t.hero.descriptionEnd}
           </p>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-2">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-1">
             {t.hero.subtitle}
           </p>
         </div>
 
         {/* Info Cards */}
         <div
-          className={`grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 transition-all duration-700 delay-600 ${
+          className={`grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-10 max-w-4xl mx-auto transition-all duration-700 delay-600 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           {infoCards.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-6 rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm hover:border-accent/30 transition-all duration-300"
+              className="flex flex-col items-center p-5 md:p-6 rounded-xl border border-border/30 bg-card/20 backdrop-blur-sm hover:border-accent/20 transition-all duration-300"
             >
-              <card.icon className="w-6 h-6 text-accent mb-3" />
-              <span className="text-xs text-muted-foreground tracking-wider mb-1">
+              <card.icon className="w-5 h-5 text-accent mb-3" />
+              <span className="text-[10px] md:text-xs text-muted-foreground tracking-widest uppercase mb-1">
                 {card.label}
               </span>
               <span className="text-sm md:text-base font-semibold text-foreground">
@@ -239,24 +185,26 @@ export const HeroSection = () => {
           <Button
             onClick={scrollToProgram}
             size="lg"
-            className="gradient-cta hover:opacity-90 text-foreground px-10 py-6 text-lg font-semibold rounded-full shadow-lg shadow-purple-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105"
+            className="gradient-cta hover:opacity-90 text-foreground px-12 py-6 text-lg font-semibold rounded-full shadow-lg shadow-purple-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105"
           >
             {t.hero.cta}
             <Rocket className="w-5 h-5 ml-2" />
           </Button>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator - Mouse Icon */}
         <div
-          className={`mt-16 transition-all duration-700 delay-800 ${
+          className={`mt-14 transition-all duration-700 delay-800 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
           <button
             onClick={scrollToProgram}
-            className="flex flex-col items-center text-muted-foreground hover:text-accent transition-colors"
+            className="flex flex-col items-center text-muted-foreground/50 hover:text-accent transition-colors group"
           >
-            <ChevronDown className="w-6 h-6 animate-bounce" />
+            <div className="relative w-6 h-10 border-2 border-current rounded-full flex items-start justify-center p-1">
+              <div className="w-1 h-2 bg-current rounded-full animate-bounce" />
+            </div>
           </button>
         </div>
       </div>
