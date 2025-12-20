@@ -12,6 +12,27 @@ import VibeTools from "./pages/VibeTools";
 
 const queryClient = new QueryClient();
 
+// Wrapper component to ensure LanguageProvider works with router
+const AppRoutes = () => {
+  return (
+    <LanguageProvider>
+      <Routes>
+        {/* Redirect root to Russian */}
+        <Route path="/" element={<Navigate to="/ru" replace />} />
+        
+        {/* Language-prefixed routes */}
+        <Route path="/:lang" element={<Index />} />
+        <Route path="/:lang/vibe-tools" element={<VibeTools />} />
+        <Route path="/:lang/payment-success" element={<PaymentSuccess />} />
+        <Route path="/:lang/payment-canceled" element={<PaymentCanceled />} />
+        
+        {/* Catch-all */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </LanguageProvider>
+  );
+};
+
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
@@ -19,21 +40,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <LanguageProvider>
-            <Routes>
-              {/* Redirect root to Russian */}
-              <Route path="/" element={<Navigate to="/ru" replace />} />
-              
-              {/* Language-prefixed routes */}
-              <Route path="/:lang" element={<Index />} />
-              <Route path="/:lang/vibe-tools" element={<VibeTools />} />
-              <Route path="/:lang/payment-success" element={<PaymentSuccess />} />
-              <Route path="/:lang/payment-canceled" element={<PaymentCanceled />} />
-              
-              {/* Catch-all */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </LanguageProvider>
+          <AppRoutes />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
