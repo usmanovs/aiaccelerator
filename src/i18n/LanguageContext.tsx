@@ -1,4 +1,4 @@
-// Language context for i18n support
+// Language context for i18n support - v2
 import { createContext, useContext, ReactNode } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Language, Translations, getTranslation, languages } from "./index";
