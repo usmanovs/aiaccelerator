@@ -21,7 +21,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const pathLang = pathSegments[0];
   
   // Default to English, validate language code
-  const currentLang: Language = (pathLang && ["en", "ru", "fa"].includes(pathLang)) 
+  const currentLang: Language = (pathLang && ["en", "ru", "fa", "ky"].includes(pathLang)) 
     ? (pathLang as Language) 
     : "en";
   
@@ -32,7 +32,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const pathParts = currentPath.split("/").filter(Boolean);
     
     // Remove old language prefix if exists
-    if (pathParts[0] && ["en", "ru", "fa"].includes(pathParts[0])) {
+    if (pathParts[0] && ["en", "ru", "fa", "ky"].includes(pathParts[0])) {
       pathParts.shift();
     }
     
