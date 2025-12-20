@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/HeroSection";
+import { StudentProjectsShowcase } from "@/components/StudentProjectsShowcase";
 import { SocialProof } from "@/components/SocialProof";
 import { InstructorCard } from "@/components/InstructorCard";
 import { PaymentButton } from "@/components/PaymentButton";
@@ -31,7 +32,7 @@ const Index = () => {
       <WhatsAppButton />
       <HeroSection />
       
-      
+      <StudentProjectsShowcase />
 
       <VideoTestimonial />
       <div id="testimonials">
