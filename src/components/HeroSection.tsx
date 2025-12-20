@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Calendar, Target, User, Rocket, ChevronDown } from "lucide-react";
@@ -21,12 +21,32 @@ export const HeroSection = () => {
     }
   };
 
-  // Generate grid dots
-  const gridDots = Array.from({ length: 100 }, (_, i) => ({
+  // Generate floating particles with memoization - reduced count for subtlety
+  const particles = useMemo(() => Array.from({ length: 15 }, (_, i) => ({
     id: i,
-    left: `${(i % 10) * 10 + 5}%`,
-    top: `${Math.floor(i / 10) * 10 + 5}%`,
-  }));
+    left: `${Math.random() * 100}%`,
+    top: `${Math.random() * 100}%`,
+    size: Math.random() * 3 + 1,
+    delay: `${Math.random() * 5}s`,
+    duration: `${Math.random() * 4 + 6}s`,
+    type: Math.random() > 0.8 ? 'glow' : 'dot',
+  })), []);
+
+  // Generate grid intersection dots - reduced for cleaner look
+  const gridDots = useMemo(() => Array.from({ length: 40 }, (_, i) => ({
+    id: i,
+    left: `${(i % 8) * 13 + 6}%`,
+    top: `${Math.floor(i / 8) * 18 + 10}%`,
+    delay: `${Math.random() * 4}s`,
+  })), []);
+
+  // Generate orb glows - more subtle
+  const orbs = useMemo(() => [
+    { left: '5%', top: '15%', size: 250, color: 'hsl(180 100% 50% / 0.04)', delay: '0s' },
+    { left: '85%', top: '25%', size: 200, color: 'hsl(280 80% 60% / 0.03)', delay: '2s' },
+    { left: '15%', top: '75%', size: 220, color: 'hsl(280 80% 60% / 0.03)', delay: '4s' },
+    { left: '75%', top: '85%', size: 180, color: 'hsl(180 100% 50% / 0.04)', delay: '1s' },
+  ], []);
 
   const infoCards = [
     {
@@ -58,15 +78,58 @@ export const HeroSection = () => {
       dir={t.dir}
     >
       {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-50" />
+      <div className="absolute inset-0 bg-grid-pattern-animated pointer-events-none" />
 
-      {/* Grid Dots */}
+      {/* Scanning Line Effect */}
+      <div className="scan-line pointer-events-none" />
+
+      {/* Orb Glows */}
+      {orbs.map((orb, i) => (
+        <div
+          key={i}
+          className="orb-glow pointer-events-none"
+          style={{
+            left: orb.left,
+            top: orb.top,
+            width: orb.size,
+            height: orb.size,
+            background: orb.color,
+            animationDelay: orb.delay,
+          }}
+        />
+      ))}
+
+      {/* Grid Intersection Dots */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {gridDots.map((dot) => (
           <div
             key={dot.id}
-            className="absolute w-1 h-1 rounded-full bg-accent/20"
-            style={{ left: dot.left, top: dot.top }}
+            className="particle particle-dot"
+            style={{
+              left: dot.left,
+              top: dot.top,
+              width: 3,
+              height: 3,
+              animationDelay: dot.delay,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {particles.map((particle) => (
+          <div
+            key={particle.id}
+            className={`particle ${particle.type === 'glow' ? 'particle-glow' : 'particle-dot'}`}
+            style={{
+              left: particle.left,
+              top: particle.top,
+              width: particle.type === 'glow' ? particle.size * 8 : particle.size,
+              height: particle.type === 'glow' ? particle.size * 8 : particle.size,
+              animationDelay: particle.delay,
+              animationDuration: particle.duration,
+            }}
           />
         ))}
       </div>
